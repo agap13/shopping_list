@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvx:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shopping.Core.Pages.MainPage"
+             xmlns:res="clr-namespace:Shopping.Core.Resources;assembly=Shopping.Core"
+             xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"    
+             Title="Main">
+  <Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <StackLayout Grid.Row="1" Grid.Column="1">
+      <Button Text="{res:Translate GoToSecondPageText}" Command="{Binding GoToSecondPageCommand}" />    
+    </StackLayout>
+  </Grid>
+</mvx:MvxContentPage>

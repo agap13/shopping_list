@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvx:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shopping.Core.Pages.ShoppingListPage"
+                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"  
+             xmlns:local="clr-namespace:Shopping.Core.Converters" BackgroundColor="White">
+    <ContentPage.Resources>
+        
+        <ResourceDictionary>
+            <local:ShoppingCounterDisplayConverter x:Key="amountConv"></local:ShoppingCounterDisplayConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentView >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <StackLayout Grid.Row="3" Grid.Column="0" Margin="170,20,20,10">
+            <TextCell Text="Lista zakupów: " TextColor="Black" />
+        </StackLayout>
+        
+        <StackLayout Grid.Row="2" Grid.Column="0" >
+            <Label Text="Lista zakupów: " TextColor="Black" FontSize="Medium" XAlign="Center"/>
+            <ListView x:Name="ListView" Grid.Row="0" Grid.Column="0" ItemsSource="{Binding ShoppingList}" SelectedItem="{Binding SelectedShoppingItem}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0,0,0,5" HorizontalOptions="FillAndExpand" >
+                                <Grid VerticalOptions="Fill" BackgroundColor="White">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding ImgPath}" Grid.Row="0" Grid.Column="0"  />
+                                    <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" YAlign="End" XAlign="Center" TextColor="Black"/>
+                                    <Label Text="{Binding ., Converter={StaticResource amountConv}}" Grid.Row="0" Grid.Column="2" YAlign="End" XAlign="Center" TextColor="Black"/>
+                                    <Label Text="{Binding Price, StringFormat='{0} zl'}" Grid.Row="0" Grid.Column="3" YAlign="End"  TextColor="Black"/> <!---XAlign=End-->
+                                    <Button Command="{Binding Path = BindingContext.RemoveItemCommand,Source={x:Reference Name=ListView}}" CommandParameter="{Binding .}" Image="Icon.png"   Grid.Column="4"/>
+                                    <Button Text="E"  Grid.Column="5"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="Suma: " TextColor="Red"/>
+            <Button Text="Dodaj"/>
+            <Button Text="Wyczyść liste"/>
+        </StackLayout>
+
+    </ContentView>
+</mvx:MvxContentPage>
