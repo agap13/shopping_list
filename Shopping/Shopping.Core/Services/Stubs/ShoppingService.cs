@@ -68,9 +68,8 @@ namespace Shopping.Core.Services.Stubs
             return Task.FromResult(_shoppinglist);
         }
 
-        public Task<List<ShoppingItemPO>> DeleteShoppingItem(int id)
+        public Task<List<ShoppingItemPO>> DeleteShoppingItem(ShoppingItemPO item)
         {
-            var item = _shoppinglist.Where(x => x.ShoppingId == id).FirstOrDefault();
             _shoppinglist.Remove(item);
             return Task.FromResult(_shoppinglist);
         }
@@ -86,6 +85,12 @@ namespace Shopping.Core.Services.Stubs
         public Task<List<ShoppingItemPO>> AddShoppingItem(ShoppingItemPO item)
         {
             _shoppinglist.Add(item);
+            return Task.FromResult(_shoppinglist);
+        }
+
+        public Task<List<ShoppingItemPO>> ClearShoppingList()
+        {
+            _shoppinglist.Clear();
             return Task.FromResult(_shoppinglist);
         }
     }

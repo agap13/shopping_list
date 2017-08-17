@@ -13,7 +13,8 @@ namespace Shopping.Core.Services
         Task<ShoppingItemPO> GetShoppingItem(int id);
         Task<List<ShoppingItemPO>> AddShoppingItem(ShoppingItemPO item);
         Task<List<ShoppingItemPO>> EditShoppingItem(ShoppingItemPO item);
-        Task<List<ShoppingItemPO>> DeleteShoppingItem(int id);
+        Task<List<ShoppingItemPO>> DeleteShoppingItem(ShoppingItemPO item);
         Task<List<ShoppingItemPO>> GetShoppingItems(string phrase); // to search
+        Task<List<ShoppingItemPO>> ClearShoppingList();
     }
 }

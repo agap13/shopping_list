@@ -37,7 +37,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Behaviors\DoubleValidationBehavior.cs" />
+    <Compile Include="Behaviors\NumberValidationBehavior.cs" />
+    <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Converters\ShoppingCounterDisplayConverter.cs" />
+    <Compile Include="Converters\ShoppingTypeToBoolConverter.cs" />
     <Compile Include="FormsApp.xaml.cs">
       <DependentUpon>FormsApp.xaml</DependentUpon>
     </Compile>
@@ -45,6 +49,12 @@
     <Compile Include="Behaviors\BehaviorBase.cs" />
     <Compile Include="Behaviors\EventToCommandBehavior.cs" />
     <Compile Include="DebugTrace.cs" />
+    <Compile Include="Pages\AddShoppingItemPage.xaml.cs">
+      <DependentUpon>AddShoppingItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditShoppingItemPage.xaml.cs">
+      <DependentUpon>EditShoppingItemPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ShoppingListPage.xaml.cs">
       <DependentUpon>ShoppingListPage.xaml</DependentUpon>
     </Compile>
@@ -80,6 +90,8 @@
     <Compile Include="Services\IAppSettings.cs" />
     <Compile Include="Services\IShoppingService.cs" />
     <Compile Include="Services\Stubs\ShoppingService.cs" />
+    <Compile Include="ViewModels\AddShoppingItemViewModel.cs" />
+    <Compile Include="ViewModels\EditShoppingItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -194,6 +206,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\ShoppingListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AddShoppingItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\EditShoppingItemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

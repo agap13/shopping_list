@@ -31,7 +31,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="0,0,0,5" HorizontalOptions="FillAndExpand" >
-                                <Grid VerticalOptions="Fill" BackgroundColor="White">
+                                <Grid VerticalOptions="Fill" >
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="1*"/>
                                         <ColumnDefinition Width="2*"/>
@@ -43,9 +43,9 @@
                                     <Image Source="{Binding ImgPath}" Grid.Row="0" Grid.Column="0"  />
                                     <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" YAlign="End" XAlign="Center" TextColor="Black"/>
                                     <Label Text="{Binding ., Converter={StaticResource amountConv}}" Grid.Row="0" Grid.Column="2" YAlign="End" XAlign="Center" TextColor="Black"/>
-                                    <Label Text="{Binding Price, StringFormat='{0} zl'}" Grid.Row="0" Grid.Column="3" YAlign="End"  TextColor="Black"/> <!---XAlign=End-->
+                                    <Label Text="{Binding Price, StringFormat='{0} zl'}" Grid.Row="0" Grid.Column="3" YAlign="End"  TextColor="Black"/> 
                                     <Button Command="{Binding Path = BindingContext.RemoveItemCommand,Source={x:Reference Name=ListView}}" CommandParameter="{Binding .}" Image="Icon.png"   Grid.Column="4"/>
-                                    <Button Text="E"  Grid.Column="5"/>
+                                    <Button Command="{Binding Path = BindingContext.EditItemCommand,Source={x:Reference Name=ListView}}" CommandParameter="{Binding .}" Text="E"  Grid.Column="5"/>
                                 </Grid>
                             </StackLayout>
                         </ViewCell>
@@ -53,9 +53,8 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Label Text="Suma: " TextColor="Red"/>
-            <Button Text="Dodaj"/>
-            <Button Text="Wyczyść liste"/>
+            <Button Text="Dodaj" Command="{Binding AddShoppingListItem}"/>
+            <Button Text="Wyczyść liste" Command="{Binding ClearShoppingListCommand}"/>
         </StackLayout>
-
     </ContentView>
 </mvx:MvxContentPage>

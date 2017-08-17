@@ -7,8 +7,7 @@ C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.Pages.MainPage.xaml.g.cs
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.FormsApp.xaml.g.cs
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.Pages.ShoppingListPage.xaml.g.cs
-C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.dll
-C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.Pages.AddShoppingItemPage.xaml.g.cs
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Debug\Shopping.Core.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Debug\Shopping.Core.pdb
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Debug\ru-RU\Shopping.Core.resources.dll
@@ -50,3 +49,6 @@ C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\ru-RU\Shopping.Core.resources.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\en-US\Shopping.Core.resources.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\de-DE\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.Pages.EditShoppingItemPage.xaml.g.cs
