@@ -18,6 +18,12 @@ C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Plugin.Settings.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Splat.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\SQLite-net.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\SQLitePCLRaw.batteries_green.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\SQLitePCLRaw.core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Xamarin.Android.Support.Annotations.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Xamarin.Android.Support.Compat.dll

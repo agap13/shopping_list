@@ -120,6 +120,14 @@ C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\res\drawable\pytajnik.jpg
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\R.cs.flag
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\uploadflags.txt
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\SQLite-net.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\SQLite-net.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\SQLite-net.xml
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\Shopping.Core.dll.mdb
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\bin\Debug\Shopping.Droid.dll.mdb
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Acr.Support.Android.dll.mdb

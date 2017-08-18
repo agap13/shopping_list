@@ -10,6 +10,7 @@ using MvvmCross.Platform.IoC;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Plugins.Json;
 using Shopping.Core.Services;
+using Shopping.Core.Services.Production;
 using Shopping.Core.Services.Stubs;
 
 namespace Shopping.Core
@@ -31,10 +32,9 @@ namespace Shopping.Core
                 .RegisterAsLazySingleton();
 
             Mvx.RegisterType<Services.IAppSettings, Services.AppSettings>();
-            //Mvx.RegisterType<IMvxJsonConverter, MvxJsonConverter>();
             Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
 
-            Mvx.LazyConstructAndRegisterSingleton<IShoppingService, ShoppingService>();
+            Mvx.LazyConstructAndRegisterSingleton<IShoppingService, ShoppingService>(); //stub
 
             //if (IsConfiguredWithStubs == false)
             //{

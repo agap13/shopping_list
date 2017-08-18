@@ -4,16 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Shopping.Core.POs;
+using SQLite;
+using Xamarin.Forms;
 
-namespace Shopping.Core.Services.Stubs
+namespace Shopping.Core.Services.Production
 {
     public class ShoppingService : IShoppingService
-    {
-        public List<ShoppingItemPO> _shoppinglist = new List<ShoppingItemPO>();
+    { 
+        readonly SQLiteAsyncConnection database;
 
         public ShoppingService()
         {
-            _shoppinglist = new List<ShoppingItemPO>()
+            //database = new SQLiteAsyncConnection(dbPath);
+            database = DependencyService.Get<IDatabaseConnection>().DbConnection();
+            database.CreateTableAsync<ShoppingItemPO>().Wait();
+
+            //if (!database.t) //.Table<ShoppingItemPO>().Any())
+            //{
+            //    AddNewCustomer();
+            //}
+
+            // add checking if emty table
+            List<ShoppingItemPO> list = GetShoppinItems();
+            foreach(var item in list)
+            {
+                AddShoppingItem(item);
+            }
+        }
+
+        public List<ShoppingItemPO> GetShoppinItems()
+        {
+            return new List<ShoppingItemPO>()
             {
                 new ShoppingItemPerPcs()
                 {
@@ -49,49 +70,38 @@ namespace Shopping.Core.Services.Stubs
                 },
             };
         }
-        
-
-        public Task<ShoppingItemPO> GetShoppingItem(int id)
+        public Task<List<ShoppingItemPO>> AddShoppingItem(ShoppingItemPO item)
         {
-            var item = _shoppinglist.Where(x => x.ShoppingId == id).FirstOrDefault();
-            return Task.FromResult(item);
+            database.InsertAsync(item);
+            return GetShoppingList();
         }
 
-        public Task<List<ShoppingItemPO>> GetShoppingItems(string phrase)
+        // remove it
+        public async Task<List<ShoppingItemPO>> ClearShoppingList()
         {
-            var items = _shoppinglist.Where(x => x.Name.StartsWith(phrase)).ToList();
-            return Task.FromResult(items);
-        }
-
-        public Task<List<ShoppingItemPO>> GetShoppingList()
-        {
-            return Task.FromResult(_shoppinglist);
+            var items = await GetShoppingList();
+            foreach(var item in items)
+            {
+                await database.DeleteAsync(item);
+            }
+            return await GetShoppingList();
         }
 
         public Task<List<ShoppingItemPO>> DeleteShoppingItem(ShoppingItemPO item)
         {
-            _shoppinglist.Remove(item);
-            return Task.FromResult(_shoppinglist);
+            database.DeleteAsync(item);
+            return GetShoppingList();
         }
 
         public Task<List<ShoppingItemPO>> EditShoppingItem(ShoppingItemPO item)
         {
-            var currentItem = _shoppinglist.Where(x => x.ShoppingId == item.ShoppingId).FirstOrDefault();
-            var index = _shoppinglist.IndexOf(currentItem);
-            _shoppinglist[index] = item;
-            return Task.FromResult(_shoppinglist);
+            database.UpdateAsync(item);
+            return GetShoppingList();
         }
 
-        public Task<List<ShoppingItemPO>> AddShoppingItem(ShoppingItemPO item)
+        public Task<List<ShoppingItemPO>> GetShoppingList()
         {
-            _shoppinglist.Add(item);
-            return Task.FromResult(_shoppinglist);
-        }
-
-        public Task<List<ShoppingItemPO>> ClearShoppingList()
-        {
-            _shoppinglist.Clear();
-            return Task.FromResult(_shoppinglist);
+            return database.Table<ShoppingItemPO>().ToListAsync();
         }
     }
 }
