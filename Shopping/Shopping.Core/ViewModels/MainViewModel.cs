@@ -31,11 +31,6 @@ namespace Shopping.Core.ViewModels
             _navigationService.Navigate<ShoppingListViewModel>();
         }
 
-        //new MvxAsyncCommand(async () =>
-        //{
-        //    await _navigationService.Navigate<ShoppingListViewModel>();
-        //});
-
         //public IMvxCommand OpenGithubUrlCommand =>
         //    new MvxCommand(() =>
         //    {
@@ -43,11 +38,5 @@ namespace Shopping.Core.ViewModels
         //    });
 
         public string ButtonText { get; set; }
-
-        public int SuperNumber
-        {
-            get { return _settings.SuperNumber; }
-            set { _settings.SuperNumber = value; }
-        }
     }
 }

@@ -1,11 +1,17 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Shopping.Core.Behaviors
 {
     public class DoubleValidationBehavior : Behavior<Entry>
     {
-        public static readonly BindableProperty IsValidProperty = BindableProperty.Create("IsValid", typeof(bool), typeof(DoubleValidationBehavior), false);
+        public static readonly BindableProperty IsValidProperty =
+            BindableProperty.Create("IsValid", typeof(bool), typeof(DoubleValidationBehavior), false, BindingMode.TwoWay);
+
+        public bool IsValid
+        {
+            get => (bool) GetValue(IsValidProperty);
+            set => SetValue(IsValidProperty, value);
+        }
 
         protected override void OnAttachedTo(Entry entry)
         {
@@ -13,26 +19,25 @@ namespace Shopping.Core.Behaviors
             base.OnAttachedTo(entry);
         }
 
+        protected override void OnAttachedTo(BindableObject bindable)
+        {
+            base.OnAttachedTo(bindable);
+            bindable.BindingContextChanged +=
+                (sender, _) => this.BindingContext = ((BindableObject)sender).BindingContext;
+        }
 
         protected override void OnDetachingFrom(Entry entry)
         {
-
             entry.TextChanged -= OnEntryTextChanged;
             base.OnDetachingFrom(entry);
         }
 
 
-        void OnEntryTextChanged(object sender, TextChangedEventArgs args)
+        private void OnEntryTextChanged(object sender, TextChangedEventArgs args)
         {
             double result;
             IsValid = double.TryParse(args.NewTextValue, out result);
-            ((Entry)sender).TextColor = IsValid ? Color.Black : Color.Red;
-        }
-        public bool IsValid
-        {
-            get { return (bool)GetValue(IsValidProperty); }
-            set { SetValue(IsValidProperty, value); }
-
+            ((Entry) sender).TextColor = IsValid ? Color.Black : Color.Red;
         }
     }
 }

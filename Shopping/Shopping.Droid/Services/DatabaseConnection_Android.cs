@@ -1,32 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Shopping.Core.Services;
-using SQLite;
 using System.IO;
+using Shopping.Core.Model.Storage;
 using Shopping.Droid.Services;
+using SQLite;
+using Xamarin.Forms;
 
-[assembly: Xamarin.Forms.Dependency(typeof(DatabaseConnection_Android))]
+[assembly: Dependency(typeof(DatabaseConnection_Android))]
+
 namespace Shopping.Droid.Services
 {
     public class DatabaseConnection_Android : IDatabaseConnection
     {
         public SQLiteAsyncConnection DbConnection()
         {
-            var dbName = "ShoppingListDb.sqlite";//
-            var path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), dbName);
+            var dbName = "ShoppingListDb.sqlite"; //
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), dbName);
 
             if (!File.Exists(path))
                 File.Create(path);
-                
+
 
             return new SQLiteAsyncConnection(path, false);
         }
@@ -34,7 +26,7 @@ namespace Shopping.Droid.Services
         public SQLiteConnection DbConnectionSync()
         {
             var dbName = "ShoppingListDb.sqlite";
-            var path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), dbName);
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), dbName);
 
             if (!File.Exists(path))
                 File.Create(path);

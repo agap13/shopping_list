@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Shopping.Core.Behaviors
 {
     public class NumberValidationBehavior : Behavior<Entry>
     {
+        public static readonly BindableProperty IsValidProperty =
+            BindableProperty.Create("IsValid", typeof(bool), typeof(NumberValidationBehavior), false, BindingMode.TwoWay);
+
+        public bool IsValid
+        {
+            get => (bool)GetValue(IsValidProperty);
+            set => SetValue(IsValidProperty, value);
+        }
 
         protected override void OnAttachedTo(Entry entry)
         {
@@ -16,20 +19,25 @@ namespace Shopping.Core.Behaviors
             base.OnAttachedTo(entry);
         }
 
+        protected override void OnAttachedTo(BindableObject bindable)
+        {
+            base.OnAttachedTo(bindable);
+            bindable.BindingContextChanged +=
+                (sender, _) => this.BindingContext = ((BindableObject)sender).BindingContext;
+        }
 
         protected override void OnDetachingFrom(Entry entry)
         {
-
             entry.TextChanged -= OnEntryTextChanged;
             base.OnDetachingFrom(entry);
         }
 
 
-        void OnEntryTextChanged(object sender, TextChangedEventArgs args)
+        private void OnEntryTextChanged(object sender, TextChangedEventArgs args)
         {
             int result;
-            bool isValid = int.TryParse(args.NewTextValue, out result);
-            ((Entry)sender).TextColor = isValid ? Color.Black : Color.Red;
+            var isValid = int.TryParse(args.NewTextValue, out result);
+            ((Entry) sender).TextColor = isValid ? Color.Black : Color.Red;
         }
     }
 }

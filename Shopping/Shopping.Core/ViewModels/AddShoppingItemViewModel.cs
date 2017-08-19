@@ -1,19 +1,21 @@
-﻿using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
-using Shopping.Core.POs;
-using Shopping.Core.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using MvvmCross.Core.Navigation;
+using MvvmCross.Core.ViewModels;
+using Shopping.Core.Model.Entities;
+using Shopping.Core.Services;
 
 namespace Shopping.Core.ViewModels
 {
     public class AddShoppingItemViewModel : MvxViewModel
     {
-        private readonly IShoppingService _shoppingService;
         private readonly IMvxNavigationService _navigationService;
+        private readonly IShoppingService _shoppingService;
+
+        private int _counter;
+
+        public List<string> ItemTypes = new List<string> {"Na wagę", "Na sztuki"};
 
         public AddShoppingItemViewModel(IMvxNavigationService navigationService, IShoppingService shoppingService)
         {
@@ -21,40 +23,58 @@ namespace Shopping.Core.ViewModels
             _navigationService = navigationService;
         }
 
-        public IMvxCommand AddShoppingItemCmd => new MvxCommand(AddNewShoppingItem);
-
         public ShoppingItemEntity ShoppingItem { get; set; } = new ShoppingItemEntity();
-       
-        public List<string> ItemTypes = new List<string>() { "Na wagę", "Na sztuki" };
         public string SelectedType { get; set; }
 
-        public bool IsPerWeightItemVisible
+        public bool IsPerWeightItemVisible => SelectedType.Contains("Na wagę");
+
+        public double AmountCounter { get; set; }
+
+        private bool _isValidPrice;
+        public bool IsValidPrice
         {
-            get
+            get => _isValidPrice;
+            set
             {
-                if (SelectedType.Contains("Na wagę"))
-                    return true;
-                else
-                    return false;
+                if (_isValidPrice != value)
+                {
+                    _isValidPrice = value;
+                    ErrorMessage = string.Empty;
+                    RaisePropertyChanged(() => IsValidPrice);
+                }
             }
         }
 
-        int _counter = 0;
+        private bool _isValidNumber;
+        public bool IsValidNumber
+        {
+            get => _isValidNumber;
+            set
+            {
+                if (_isValidNumber != value)
+                {
+                    _isValidNumber = value;
+                    ErrorMessage = string.Empty;
+                    RaisePropertyChanged(() => IsValidNumber);
+                }
+            }
+        }
+
+        public string ErrorMessage { get; set; } = string.Empty;
+
         public override async Task Initialize()
         {
             var list = await _shoppingService.GetShoppingList();
             _counter = list.Count;
         }
 
-        public double AmountCounter { get; set; }
+        public IMvxCommand AddShoppingItemCmd => new MvxCommand(AddNewShoppingItem);
+
         private void AddNewShoppingItem()
         {
-            //if (!IsValidPrice || !IsValidNumber)
-            //{
-            //    ErrorMessage = "Niepoprawna cena lub ilość!";
-            //}
-            //else
+            if (IsValidPrice && IsValidNumber)
             {
+                ErrorMessage = String.Empty;
                 ShoppingItemEntity item;
                 if (IsPerWeightItemVisible)
                 {
@@ -64,7 +84,7 @@ namespace Shopping.Core.ViewModels
                 else
                 {
                     item = new ShoppingItemPerPcs();
-                    (item as ShoppingItemPerPcs).ItemCount = (int)AmountCounter; //change
+                    (item as ShoppingItemPerPcs).ItemCount = (int) AmountCounter; //change
                 }
 
                 item.Price = ShoppingItem.Price;
@@ -74,41 +94,10 @@ namespace Shopping.Core.ViewModels
 
                 _navigationService.Navigate<ShoppingListViewModel, ShoppingItemEntity>(item);
             }
-        }
-
-        bool _isValidPrice = false;
-        public bool IsValidPrice
-        {
-            get
+            else
             {
-                return _isValidPrice;
-            }
-            set
-            {
-                if(_isValidPrice!=value)
-                {
-                    _isValidPrice = value;
-                    RaisePropertyChanged(() =>IsValidPrice);
-                }
+                ErrorMessage = "Niepoprawna cena lub ilość!";
             }
         }
-
-        bool _isValidNumber = false;
-        public bool IsValidNumber
-        {
-            get
-            {
-                return _isValidNumber;
-            }
-            set
-            {
-                if (_isValidNumber != value)
-                {
-                    _isValidNumber = value;
-                    RaisePropertyChanged(() => IsValidNumber);
-                }
-            }
-        }
-        public string ErrorMessage { get; set; } = string.Empty;
     }
 }

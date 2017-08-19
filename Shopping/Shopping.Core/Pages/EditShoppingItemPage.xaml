@@ -40,14 +40,14 @@
                     </Entry.Behaviors>
                 </Entry>
                 <Label Text="Cena: " Grid.Row="2" Grid.Column="0" TextColor="Black" FontAttributes="Bold" VerticalOptions="End" FontSize="Medium"/>
-                <Entry Text="{Binding ShoppingItem.Price}" Grid.Row="2" Grid.Column="1" TextColor="Black" Placeholder="Cena" WidthRequest="150" VerticalOptions="End" >
+                <Entry Text="{Binding ShoppingItem.Price}" Grid.Row="2" Grid.Column="1" TextColor="Black" Placeholder="Cena" WidthRequest="150" VerticalOptions="End">
                     <Entry.Behaviors>
                         <local:DoubleValidationBehavior IsValid="{Binding IsValidPrice}"/>
                     </Entry.Behaviors>
                 </Entry>
             </Grid>
             <Button Text="Zapisz" Command="{Binding EditShoppingItemCmd}"/>
-            <Label IsVisible="{Binding IsValidPrice, Converter={StaticResource invert}}" Text="{Binding ErrorMessage}" TextColor="Red" FontAttributes="Bold"/>
+            <Label Text="{Binding ErrorMessage}" HorizontalTextAlignment="Center" TextColor="Red" FontAttributes="Bold"/>
         </StackLayout>
     </ContentView>
 </mvx:MvxContentPage>

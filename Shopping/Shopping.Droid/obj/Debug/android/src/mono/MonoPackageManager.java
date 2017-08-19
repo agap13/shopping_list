@@ -114,6 +114,8 @@ class MonoPackageManager_Resources {
 		"MvvmCross.Platform.dll",
 		"MvvmCross.Platform.Droid.dll",
 		"MvvmCross.Plugins.Json.dll",
+		"MvvmCross.Plugins.Visibility.dll",
+		"MvvmCross.Plugins.Visibility.Droid.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.Settings.Abstractions.dll",
 		"Plugin.Settings.dll",

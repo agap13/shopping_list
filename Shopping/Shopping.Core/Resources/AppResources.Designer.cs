@@ -66,7 +66,7 @@ namespace Shopping.Core.Resources {
         /// </summary>
         internal static string GoToSecondPageText {
             get {
-                return ResourceManager.GetString("GoToSecondPageText", resourceCulture);
+                return ResourceManager.GetString("Lista zakupów", resourceCulture);
             }
         }
     }

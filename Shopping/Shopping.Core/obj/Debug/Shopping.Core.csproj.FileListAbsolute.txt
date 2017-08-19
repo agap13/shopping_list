@@ -59,3 +59,5 @@ C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Debug\SQLite-net.pdb
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Debug\SQLite-net.xml
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Debug\Shopping.Core.csprojResolveAssemblyReference.cache
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Debug\MvvmCross.Plugins.Visibility.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Debug\MvvmCross.Plugins.Visibility.pdb

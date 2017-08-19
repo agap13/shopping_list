@@ -7,19 +7,18 @@ using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Plugins.Json;
 using Shopping.Core.Model.Storage;
 using Shopping.Core.Model.Storage.Interfaces;
+using Shopping.Core.Resources;
 using Shopping.Core.Services;
-using Shopping.Core.Services.Production;
-using Shopping.Core.Services.Stubs;
+using Shopping.Core.ViewModels;
 
 namespace Shopping.Core
 {
     public class MvxApp : MvxApplication
     {
-        public static readonly bool IsConfiguredWithStubs = false;
+        // set to true to test stub service 
+        public static readonly bool IsConfiguredWithStubs = false; 
 
         public override void Initialize()
         {
@@ -28,25 +27,23 @@ namespace Shopping.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            CreatableTypes().
-                EndingWith("Repository")
+            CreatableTypes().EndingWith("Repository")
                 .AsTypes()
                 .RegisterAsLazySingleton();
 
-            Mvx.RegisterType<Services.IAppSettings, Services.AppSettings>();
-            Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
+            Mvx.RegisterType<IAppSettings, AppSettings>();
+            Mvx.RegisterSingleton(() => UserDialogs.Instance);
 
-            Mvx.LazyConstructAndRegisterSingleton<IShoppingService, ShoppingService>(); //stub
-
-            //if (IsConfiguredWithStubs == false)
-            //{
-            //    //todo: add
-            //}
+            if (IsConfiguredWithStubs)
+                CreatableTypes()
+                    .EndingWith("Stub")
+                    .AsInterfaces()
+                    .RegisterAsLazySingleton();
 
             Mvx.LazyConstructAndRegisterSingleton<IGenericStorage, GenericStorage>();
-            Resources.AppResources.Culture = Mvx.Resolve<Services.ILocalizeService>().GetCurrentCultureInfo();
+            AppResources.Culture = Mvx.Resolve<ILocalizeService>().GetCurrentCultureInfo();
 
-            RegisterAppStart<ViewModels.MainViewModel>();
+            RegisterAppStart<MainViewModel>();
         }
     }
 }

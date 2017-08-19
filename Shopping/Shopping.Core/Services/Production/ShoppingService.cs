@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Shopping.Core.POs;
-using SQLite;
-using Xamarin.Forms;
+using Shopping.Core.Model.Entities;
 using Shopping.Core.Model.Storage.Interfaces;
 
 namespace Shopping.Core.Services.Production
@@ -18,9 +14,10 @@ namespace Shopping.Core.Services.Production
         {
             _genericStorage = genericStorage;
         }
+
         public async Task AddShoppingItem(ShoppingItemEntity item)
         {
-            if(item is ShoppingItemPerPcs)
+            if (item is ShoppingItemPerPcs)
                 await _genericStorage.InsertRow(item as ShoppingItemPerPcs);
             else
                 await _genericStorage.InsertRow(item as ShoppingItemPerWeight);
@@ -52,51 +49,50 @@ namespace Shopping.Core.Services.Production
 
         public async Task<List<ShoppingItemEntity>> GetShoppingList()
         {
-            var listPerPcs=(await _genericStorage.GetRows<ShoppingItemPerPcs>()).ToList();
+            var listPerPcs = (await _genericStorage.GetRows<ShoppingItemPerPcs>()).ToList();
             var listPerWeight = (await _genericStorage.GetRows<ShoppingItemPerWeight>()).ToList();
 
-            List<ShoppingItemEntity> list = new List<ShoppingItemEntity>(listPerPcs);
+            var list = new List<ShoppingItemEntity>(listPerPcs);
             list.AddRange(listPerWeight);
-            
+
             return new List<ShoppingItemEntity>(list);
         }
 
         public async Task InitDatabase()
-        {        
-            var shoppinglist = new List<ShoppingItemEntity>()
+        {
+            var shoppinglist = new List<ShoppingItemEntity>
             {
-                new ShoppingItemPerPcs()
+                new ShoppingItemPerPcs
                 {
                     ImgPath = "koszulka.jpg",
                     Name = "Koszulka",
                     Price = 154.99,
                     ItemCount = 2
                 },
-                new ShoppingItemPerWeight()
+                new ShoppingItemPerWeight
                 {
                     ImgPath = "banany.jpg",
                     Name = "Banany",
                     Price = 7,
                     ItemAmount = 0.5
                 },
-                new ShoppingItemPerPcs()
+                new ShoppingItemPerPcs
                 {
                     ImgPath = "sukienka.jpg",
                     Name = "Sukienka",
                     Price = 250,
                     ItemCount = 1
                 },
-                new ShoppingItemPerWeight()
+                new ShoppingItemPerWeight
                 {
                     ImgPath = "arbuz.jpg",
                     Name = "Arbuz",
                     Price = 2.5,
-                    ItemAmount =1.5
-                },
+                    ItemAmount = 1.5
+                }
             };
-            await _genericStorage.InsertRows<ShoppingItemPerPcs>(shoppinglist.OfType<ShoppingItemPerPcs>());
-            await _genericStorage.InsertRows<ShoppingItemPerWeight>(shoppinglist.OfType<ShoppingItemPerWeight>());
+            await _genericStorage.InsertRows(shoppinglist.OfType<ShoppingItemPerPcs>());
+            await _genericStorage.InsertRows(shoppinglist.OfType<ShoppingItemPerWeight>());
         }
-        
     }
 }

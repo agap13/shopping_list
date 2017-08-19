@@ -1,5 +1,4 @@
 ﻿using MvvmCross.Forms.Core;
-using Shopping.Core.POs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +17,5 @@ namespace Shopping.Core.Pages
         {
             InitializeComponent();
         }
-     }
+    }
 }

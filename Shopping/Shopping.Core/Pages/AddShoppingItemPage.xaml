@@ -1,13 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <mvx:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms" 
-             xmlns:local="clr-namespace:Shopping.Core.Behaviors"     
-             xmlns:conv="clr-namespace:Shopping.Core.Converters"
-             x:Class="Shopping.Core.Pages.AddShoppingItemPage" BackgroundColor="White" >
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
+                    xmlns:local="clr-namespace:Shopping.Core.Behaviors"
+                    xmlns:conv="clr-namespace:Shopping.Core.Converters"
+                    x:Class="Shopping.Core.Pages.AddShoppingItemPage" BackgroundColor="White">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <conv:InverseBooleanConverter x:Key="invert"/>
+            <conv:InverseBooleanConverter x:Key="invert" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentView>
@@ -15,32 +16,38 @@
             <Image Source="pytajnik.jpg" VerticalOptions="Fill" HorizontalOptions="Start" />
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="Nazwa: " TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalOptions="End" FontSize="Medium"/>
-                <Entry Text="{Binding ShoppingItem.Name}" TextColor="Black" Placeholder="Name" WidthRequest="150" Grid.Row="0" Grid.Column="1" VerticalOptions="End" />
+                <Label Text="Nazwa: " TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"
+                       VerticalOptions="End" FontSize="Medium" />
+                <Entry Text="{Binding ShoppingItem.Name}" TextColor="Black" Placeholder="Name" WidthRequest="150"
+                       Grid.Row="0" Grid.Column="1" VerticalOptions="End" />
 
-                <Label Text="Rodzaj: " Grid.Row="1" Grid.Column="0" TextColor="Black" FontAttributes="Bold" VerticalOptions="End" FontSize="Medium"/>
-                <Picker Title ="Wybierz rodzaj zakupu" Grid.Row="1" Grid.Column="1" TextColor="Black"  SelectedItem="{Binding SelectedType}">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Na sztuki</x:String>
-                        <x:String>Na wagę</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-                <Label Text="Ilość: " Grid.Row="2" Grid.Column="0" TextColor="Black" FontAttributes="Bold" VerticalOptions="End" FontSize="Medium"/>
-                <Entry Text="{Binding AmountCounter}" Grid.Row="2" Grid.Column="1" TextColor="Black" Placeholder="Ilość" WidthRequest="150" VerticalOptions="End">
+                <Label Text="Rodzaj: " Grid.Row="1" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
+                       VerticalOptions="End" FontSize="Medium" />
+                <Picker Title="Wybierz rodzaj zakupu" Grid.Row="1" Grid.Column="1" TextColor="Black"
+                        SelectedItem="{Binding SelectedType}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Na sztuki</x:String>
+                            <x:String>Na wagę</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="Ilość: " Grid.Row="2" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
+                       VerticalOptions="End" FontSize="Medium" />
+                <Entry Text="{Binding AmountCounter}" Grid.Row="2" Grid.Column="1" TextColor="Black"
+                       Placeholder="Ilość" WidthRequest="150" VerticalOptions="End">
                     <Entry.Behaviors>
-                        <local:DoubleValidationBehavior IsValid="{Binding IsValidNumber}"/>
+                        <local:DoubleValidationBehavior IsValid="{Binding IsValidNumber}" />
                     </Entry.Behaviors>
                 </Entry>
                 <!--<Entry IsVisible="{Binding IsPerWeightItemVisible,Converter={StaticResource invert}}" Text="{Binding ShoppingItem.ItemCount}" Grid.Row="2" Grid.Column="1" TextColor="Black" Placeholder="Ilość" WidthRequest="150" VerticalOptions="End">
@@ -48,15 +55,18 @@
                         <local:NumberValidationBehavior/>
                     </Entry.Behaviors>
                 </Entry>-->
-                <Label Text="Cena: " Grid.Row="3" Grid.Column="0" TextColor="Black" FontAttributes="Bold" VerticalOptions="End" FontSize="Medium"/>
-                <Entry Text="{Binding ShoppingItem.Price}" Grid.Row="3" Grid.Column="1" TextColor="Black" Placeholder="Cena" WidthRequest="150" VerticalOptions="End" >
+                <Label Text="Cena: " Grid.Row="3" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
+                       VerticalOptions="End" FontSize="Medium" />
+                <Entry Text="{Binding ShoppingItem.Price}" Grid.Row="3" Grid.Column="1" TextColor="Black"
+                       Placeholder="Cena" WidthRequest="150" VerticalOptions="End">
                     <Entry.Behaviors>
-                        <local:DoubleValidationBehavior IsValid="{Binding IsValidPrice}"/>
+                        <local:DoubleValidationBehavior IsValid="{Binding IsValidPrice}" />
                     </Entry.Behaviors>
                 </Entry>
             </Grid>
-            <Button Text="Dodaj przedmiot do listy" Command="{Binding AddShoppingItemCmd}"/>
-            <Label IsVisible="{Binding IsValidPrice, Converter={StaticResource invert}}" Text="{Binding ErrorMessage}" TextColor="Red" FontAttributes="Bold"/>
+            <Button Text="Dodaj przedmiot do listy" Command="{Binding AddShoppingItemCmd}" />
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red" FontAttributes="Bold" HorizontalTextAlignment="Center" />
         </StackLayout>
     </ContentView>
 </mvx:MvxContentPage>

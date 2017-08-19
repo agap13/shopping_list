@@ -1,19 +1,19 @@
-﻿using Shopping.Core.Model.Entities;
+﻿using Shopping.Core.Model.Entities.Interfaces;
 using SQLite;
-using Xamarin.Forms;
 
-namespace Shopping.Core.POs
+namespace Shopping.Core.Model.Entities
 {
-    public class ShoppingItemEntity :IEntity
+    public class ShoppingItemEntity : IEntity
     {
-        [PrimaryKey, AutoIncrement]
-        public int ShoppingId { get; set; }
-
         public string Name { get; set; }
 
         public string ImgPath { get; set; }
 
         public double Price { get; set; }
+
+        [PrimaryKey]
+        [AutoIncrement]
+        public int ShoppingId { get; set; }
     }
 
     public class ShoppingItemPerWeight : ShoppingItemEntity

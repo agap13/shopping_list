@@ -1,10 +1,8 @@
-﻿using Shopping.Core.Model.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
+using Shopping.Core.Model.Entities.Interfaces;
 
 namespace Shopping.Core.Model.Storage.Interfaces
 {
@@ -12,7 +10,8 @@ namespace Shopping.Core.Model.Storage.Interfaces
     {
         Task<TEntity> GetRow<TEntity>(object primaryKey) where TEntity : class, IEntity, new();
 
-        Task<List<TEntity>> GetRows<TEntity>(Expression<Func<TEntity, bool>> filter = null) where TEntity : class, IEntity, new();
+        Task<List<TEntity>> GetRows<TEntity>(Expression<Func<TEntity, bool>> filter = null)
+            where TEntity : class, IEntity, new();
 
         Task<int> InsertRow<TEntity>(TEntity entity) where TEntity : class, IEntity;
 
@@ -23,7 +22,5 @@ namespace Shopping.Core.Model.Storage.Interfaces
         Task DeleteRow<TEntity>(TEntity entity) where TEntity : class, IEntity;
 
         Task DeleteAll<TEntity>(IEnumerable<TEntity> entities) where TEntity : class, IEntity;
-
-        //Task InitDatabase<TEntity>(IEnumerable<TEntity> entities) where TEntity : class, IEntity;
     }
 }
