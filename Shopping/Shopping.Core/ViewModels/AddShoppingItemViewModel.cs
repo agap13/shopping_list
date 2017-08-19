@@ -23,7 +23,7 @@ namespace Shopping.Core.ViewModels
 
         public IMvxCommand AddShoppingItemCmd => new MvxCommand(AddNewShoppingItem);
 
-        public ShoppingItemPO ShoppingItem { get; set; } = new ShoppingItemPO();
+        public ShoppingItemEntity ShoppingItem { get; set; } = new ShoppingItemEntity();
        
         public List<string> ItemTypes = new List<string>() { "Na wagę", "Na sztuki" };
         public string SelectedType { get; set; }
@@ -55,7 +55,7 @@ namespace Shopping.Core.ViewModels
             //}
             //else
             {
-                ShoppingItemPO item;
+                ShoppingItemEntity item;
                 if (IsPerWeightItemVisible)
                 {
                     item = new ShoppingItemPerWeight();
@@ -72,7 +72,7 @@ namespace Shopping.Core.ViewModels
                 item.ImgPath = "pytajnik.jpg";
                 ShoppingItem.ShoppingId = _counter;
 
-                _navigationService.Navigate<ShoppingListViewModel, ShoppingItemPO>(item);
+                _navigationService.Navigate<ShoppingListViewModel, ShoppingItemEntity>(item);
             }
         }
 

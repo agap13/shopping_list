@@ -6,39 +6,67 @@ using System.Threading.Tasks;
 using Shopping.Core.POs;
 using SQLite;
 using Xamarin.Forms;
+using Shopping.Core.Model.Storage.Interfaces;
 
 namespace Shopping.Core.Services.Production
 {
     public class ShoppingService : IShoppingService
-    { 
-        readonly SQLiteAsyncConnection database;
+    {
+        private readonly IGenericStorage _genericStorage;
 
-        public ShoppingService()
+        public ShoppingService(IGenericStorage genericStorage)
         {
-            //database = new SQLiteAsyncConnection(dbPath);
-            database = DependencyService.Get<IDatabaseConnection>().DbConnection();
-            database.CreateTableAsync<ShoppingItemPO>().Wait();
-
-            //if (!database.t) //.Table<ShoppingItemPO>().Any())
-            //{
-            //    AddNewCustomer();
-            //}
-
-            // add checking if emty table
-            List<ShoppingItemPO> list = GetShoppinItems();
-            foreach(var item in list)
-            {
-                AddShoppingItem(item);
-            }
+            _genericStorage = genericStorage;
+        }
+        public async Task AddShoppingItem(ShoppingItemEntity item)
+        {
+            if(item is ShoppingItemPerPcs)
+                await _genericStorage.InsertRow(item as ShoppingItemPerPcs);
+            else
+                await _genericStorage.InsertRow(item as ShoppingItemPerWeight);
         }
 
-        public List<ShoppingItemPO> GetShoppinItems()
+        public async Task ClearShoppingList()
         {
-            return new List<ShoppingItemPO>()
+            var shoppingListPerWeight = await _genericStorage.GetRows<ShoppingItemPerWeight>();
+            var shoppingListPerPcs = await _genericStorage.GetRows<ShoppingItemPerPcs>();
+            await _genericStorage.DeleteAll(shoppingListPerWeight);
+            await _genericStorage.DeleteAll(shoppingListPerPcs);
+        }
+
+        public async Task DeleteShoppingItem(ShoppingItemEntity item)
+        {
+            if (item is ShoppingItemPerPcs)
+                await _genericStorage.DeleteRow(item as ShoppingItemPerPcs);
+            else
+                await _genericStorage.DeleteRow(item as ShoppingItemPerWeight);
+        }
+
+        public async Task EditShoppingItem(ShoppingItemEntity item)
+        {
+            if (item is ShoppingItemPerPcs)
+                await _genericStorage.InsertOrReplaceRow(item as ShoppingItemPerPcs);
+            else
+                await _genericStorage.InsertOrReplaceRow(item as ShoppingItemPerWeight);
+        }
+
+        public async Task<List<ShoppingItemEntity>> GetShoppingList()
+        {
+            var listPerPcs=(await _genericStorage.GetRows<ShoppingItemPerPcs>()).ToList();
+            var listPerWeight = (await _genericStorage.GetRows<ShoppingItemPerWeight>()).ToList();
+
+            List<ShoppingItemEntity> list = new List<ShoppingItemEntity>(listPerPcs);
+            list.AddRange(listPerWeight);
+            
+            return new List<ShoppingItemEntity>(list);
+        }
+
+        public async Task InitDatabase()
+        {        
+            var shoppinglist = new List<ShoppingItemEntity>()
             {
                 new ShoppingItemPerPcs()
                 {
-                    ShoppingId = 1,
                     ImgPath = "koszulka.jpg",
                     Name = "Koszulka",
                     Price = 154.99,
@@ -46,7 +74,6 @@ namespace Shopping.Core.Services.Production
                 },
                 new ShoppingItemPerWeight()
                 {
-                    ShoppingId = 2,
                     ImgPath = "banany.jpg",
                     Name = "Banany",
                     Price = 7,
@@ -54,7 +81,6 @@ namespace Shopping.Core.Services.Production
                 },
                 new ShoppingItemPerPcs()
                 {
-                    ShoppingId = 3,
                     ImgPath = "sukienka.jpg",
                     Name = "Sukienka",
                     Price = 250,
@@ -62,46 +88,15 @@ namespace Shopping.Core.Services.Production
                 },
                 new ShoppingItemPerWeight()
                 {
-                    ShoppingId = 4,
                     ImgPath = "arbuz.jpg",
                     Name = "Arbuz",
                     Price = 2.5,
                     ItemAmount =1.5
                 },
             };
+            await _genericStorage.InsertRows<ShoppingItemPerPcs>(shoppinglist.OfType<ShoppingItemPerPcs>());
+            await _genericStorage.InsertRows<ShoppingItemPerWeight>(shoppinglist.OfType<ShoppingItemPerWeight>());
         }
-        public Task<List<ShoppingItemPO>> AddShoppingItem(ShoppingItemPO item)
-        {
-            database.InsertAsync(item);
-            return GetShoppingList();
-        }
-
-        // remove it
-        public async Task<List<ShoppingItemPO>> ClearShoppingList()
-        {
-            var items = await GetShoppingList();
-            foreach(var item in items)
-            {
-                await database.DeleteAsync(item);
-            }
-            return await GetShoppingList();
-        }
-
-        public Task<List<ShoppingItemPO>> DeleteShoppingItem(ShoppingItemPO item)
-        {
-            database.DeleteAsync(item);
-            return GetShoppingList();
-        }
-
-        public Task<List<ShoppingItemPO>> EditShoppingItem(ShoppingItemPO item)
-        {
-            database.UpdateAsync(item);
-            return GetShoppingList();
-        }
-
-        public Task<List<ShoppingItemPO>> GetShoppingList()
-        {
-            return database.Table<ShoppingItemPO>().ToListAsync();
-        }
+        
     }
 }

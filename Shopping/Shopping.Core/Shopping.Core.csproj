@@ -45,6 +45,9 @@
     <Compile Include="FormsApp.xaml.cs">
       <DependentUpon>FormsApp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Entities\Interfaces\IEntity.cs" />
+    <Compile Include="Model\Storage\GenericStorage.cs" />
+    <Compile Include="Model\Storage\Interfaces\IGenericStorage.cs" />
     <Compile Include="MvxApp.cs" />
     <Compile Include="Behaviors\BehaviorBase.cs" />
     <Compile Include="Behaviors\EventToCommandBehavior.cs" />
@@ -58,7 +61,7 @@
     <Compile Include="Pages\ShoppingListPage.xaml.cs">
       <DependentUpon>ShoppingListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="POs\ShoppingItemPO.cs" />
+    <Compile Include="Model\Entities\ShoppingItemEntity.cs" />
     <Compile Include="Resources\AppResources.ru-RU.Designer.cs">
       <DependentUpon>AppResources.ru-RU.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -88,7 +91,7 @@
     <Compile Include="Resources\TranslateExtension.cs" />
     <Compile Include="Services\AppSettings.cs" />
     <Compile Include="Services\IAppSettings.cs" />
-    <Compile Include="Services\IDatabaseConnection.cs" />
+    <Compile Include="Model\Storage\IDatabaseConnection.cs" />
     <Compile Include="Services\IFileHelper.cs" />
     <Compile Include="Services\IShoppingService.cs" />
     <Compile Include="Services\Production\ShoppingService.cs" />
@@ -211,7 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomViews\" />
-    <Folder Include="Model\" />
+    <Folder Include="POs\" />
     <Folder Include="Repository\" />
     <Folder Include="Triggers\" />
   </ItemGroup>

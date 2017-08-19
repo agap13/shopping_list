@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Shopping.Core.ViewModels
 {
-    public class EditShoppingItemViewModel : MvxViewModel<ShoppingItemPO>
+    public class EditShoppingItemViewModel : MvxViewModel<ShoppingItemEntity>
     {
         private readonly IShoppingService _shoppingService;
         private readonly IMvxNavigationService _navigationService;
@@ -21,9 +21,9 @@ namespace Shopping.Core.ViewModels
             _navigationService = navigationService;
         }
 
-        public ShoppingItemPO ShoppingItem { get; set; }
+        public ShoppingItemEntity ShoppingItem { get; set; }
 
-        public override async Task Initialize(ShoppingItemPO parameter)
+        public override async Task Initialize(ShoppingItemEntity parameter)
         {
             await Task.Run(()=>ShoppingItem = parameter);
             AmountCounter = (ShoppingItem is ShoppingItemPerPcs) ? (ShoppingItem as ShoppingItemPerPcs).ItemCount : (ShoppingItem as ShoppingItemPerWeight).ItemAmount;

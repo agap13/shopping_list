@@ -21,14 +21,26 @@ namespace Shopping.Droid.Services
     {
         public SQLiteAsyncConnection DbConnection()
         {
-            var dbName = "ShoppingListDb.db3";
+            var dbName = "ShoppingListDb.sqlite";//
+            var path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), dbName);
+
+            if (!File.Exists(path))
+                File.Create(path);
+                
+
+            return new SQLiteAsyncConnection(path, false);
+        }
+
+        public SQLiteConnection DbConnectionSync()
+        {
+            var dbName = "ShoppingListDb.sqlite";
             var path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), dbName);
 
             if (!File.Exists(path))
                 File.Create(path);
 
 
-            return new SQLiteAsyncConnection(path);
+            return new SQLiteConnection(path, false);
         }
     }
 }

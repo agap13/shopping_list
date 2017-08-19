@@ -9,12 +9,11 @@ namespace Shopping.Core.Services
 {
     public interface IShoppingService
     {
-        Task<List<ShoppingItemPO>> GetShoppingList();
-        //Task<ShoppingItemPO> GetShoppingItem(int id);
-        Task<List<ShoppingItemPO>> AddShoppingItem(ShoppingItemPO item);
-        Task<List<ShoppingItemPO>> EditShoppingItem(ShoppingItemPO item);
-        Task<List<ShoppingItemPO>> DeleteShoppingItem(ShoppingItemPO item);
-        //Task<List<ShoppingItemPO>> GetShoppingItems(string phrase); // to search
-        Task<List<ShoppingItemPO>> ClearShoppingList();
+        Task<List<ShoppingItemEntity>> GetShoppingList();
+        Task AddShoppingItem(ShoppingItemEntity item);
+        Task EditShoppingItem(ShoppingItemEntity item);
+        Task DeleteShoppingItem(ShoppingItemEntity item);
+        Task ClearShoppingList();
+        Task InitDatabase();
     }
 }

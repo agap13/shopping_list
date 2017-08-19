@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Shopping.Core.ViewModels
 {
-    public class ShoppingListViewModel : MvxViewModel<ShoppingItemPO>
+    public class ShoppingListViewModel : MvxViewModel<ShoppingItemEntity>
     {
         private readonly IShoppingService _shoppingService;
         private readonly IMvxNavigationService _navigationService;
@@ -20,38 +20,37 @@ namespace Shopping.Core.ViewModels
         {
             _shoppingService = shoppingService;
             _navigationService = navigationService;
-
         }
 
-        public IMvxAsyncCommand<ShoppingItemPO> RemoveItemCommand => new MvxAsyncCommand<ShoppingItemPO>(RemoveShoppingItem);
+        public IMvxAsyncCommand<ShoppingItemEntity> RemoveItemCommand => new MvxAsyncCommand<ShoppingItemEntity>(RemoveShoppingItem);
 
-        private async Task RemoveShoppingItem(ShoppingItemPO item)
+        private async Task RemoveShoppingItem(ShoppingItemEntity item)
         {
-            var list = await _shoppingService.DeleteShoppingItem(item); 
-            ShoppingList = new MvxObservableCollection<ShoppingItemPO>(list); 
+            await _shoppingService.DeleteShoppingItem(item);
+            UpdateCollection();
         }
 
-        public IMvxAsyncCommand<ShoppingItemPO> EditItemCommand => new MvxAsyncCommand<ShoppingItemPO>(EditShoppingItem);
+        public IMvxAsyncCommand<ShoppingItemEntity> EditItemCommand => new MvxAsyncCommand<ShoppingItemEntity>(EditShoppingItem);
 
-        private async Task EditShoppingItem(ShoppingItemPO arg)
+        private async Task EditShoppingItem(ShoppingItemEntity arg)
         {
-            //_navigationService.Navigate<ShoppingListViewModel, ShoppingItemPO>(item);
-            await _navigationService.Navigate<EditShoppingItemViewModel,ShoppingItemPO>(arg);
+            await _navigationService.Navigate<EditShoppingItemViewModel,ShoppingItemEntity>(arg);
+            UpdateCollection();
         }
 
         public IMvxAsyncCommand ClearShoppingListCommand => new MvxAsyncCommand(async () => 
         {
-            var list = await _shoppingService.ClearShoppingList();
-            ShoppingList = new MvxObservableCollection<ShoppingItemPO>(list);
+            await _shoppingService.ClearShoppingList();
+            UpdateCollection();
         });
 
         public IMvxCommand AddShoppingListItem => new MvxCommand(() => { _navigationService.Navigate<AddShoppingItemViewModel>(); });
        
 
-        public MvxObservableCollection<ShoppingItemPO> ShoppingList { get; set; }
+        public MvxObservableCollection<ShoppingItemEntity> ShoppingList { get; set; }
 
-        private ShoppingItemPO _selectedShoppingItem;
-        public ShoppingItemPO SelectedShoppingItem
+        private ShoppingItemEntity _selectedShoppingItem;
+        public ShoppingItemEntity SelectedShoppingItem
         {
             get
             {
@@ -71,15 +70,30 @@ namespace Shopping.Core.ViewModels
         public override async Task Initialize()
         {
             var list = await _shoppingService.GetShoppingList();
-            ShoppingList = new MvxObservableCollection<ShoppingItemPO>(list);
+
+            // insert data to database just for displaying some items when api was started
+            if (list.Count == 0)
+            {
+                await _shoppingService.InitDatabase();
+            }
+            list = await _shoppingService.GetShoppingList();
+            ShoppingList = new MvxObservableCollection<ShoppingItemEntity>(list);
         }
 
-        public override async Task Initialize(ShoppingItemPO parameter)
+        public override async Task Initialize(ShoppingItemEntity parameter)
         {
             if (parameter == null)
                 return;
-            var list = await _shoppingService.AddShoppingItem(parameter);
-            ShoppingList = new MvxObservableCollection<ShoppingItemPO>(list);
+
+            await _shoppingService.AddShoppingItem(parameter);
+            UpdateCollection();
+        }
+
+        private async void UpdateCollection()
+        {
+            var list = await _shoppingService.GetShoppingList();
+            ShoppingList.Clear();
+            ShoppingList.AddRange(list);
         }
     }
 }

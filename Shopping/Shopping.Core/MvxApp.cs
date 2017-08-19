@@ -9,6 +9,8 @@ using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Plugins.Json;
+using Shopping.Core.Model.Storage;
+using Shopping.Core.Model.Storage.Interfaces;
 using Shopping.Core.Services;
 using Shopping.Core.Services.Production;
 using Shopping.Core.Services.Stubs;
@@ -40,6 +42,8 @@ namespace Shopping.Core
             //{
             //    //todo: add
             //}
+
+            Mvx.LazyConstructAndRegisterSingleton<IGenericStorage, GenericStorage>();
             Resources.AppResources.Culture = Mvx.Resolve<Services.ILocalizeService>().GetCurrentCultureInfo();
 
             RegisterAppStart<ViewModels.MainViewModel>();
