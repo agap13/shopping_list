@@ -56,12 +56,6 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shopping.Droid\Shopping.Droid.csproj">
-      <Project>{48d8dcc6-6342-4a62-ab87-b26cbfb3feb1}</Project>
-      <Name>Shopping.Droid</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

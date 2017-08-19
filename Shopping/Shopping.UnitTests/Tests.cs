@@ -1,18 +1,171 @@
-﻿// ---------------------------------------------------------------
-// <author>Paul Datsyuk</author>
-// <url>https://www.linkedin.com/in/pauldatsyuk/</url>
-// ---------------------------------------------------------------
-
+﻿using System.Linq;
+using Shopping.Core.Model.Entities;
+using Shopping.Core.Services;
+using Shopping.Core.Services.Stubs;
 using Xunit;
 
 namespace Shopping.UnitTests
 {
     public class Tests
     {
-        [Fact]
-        public void PassingTest()
+        private IShoppingService _shoppingService;
+
+        public Tests()
         {
-            Assert.Equal(4, 4);
+            _shoppingService = new ShoppingServiceStub();
+        }
+
+        [Fact]
+        public async void AddShoppingItemPerPcsTest()
+        {
+            int beforeCounter = (await _shoppingService.GetShoppingList()).Count;
+            var item = new ShoppingItemPerPcs
+            {
+                ShoppingId = 1,
+                ImgPath = "koszulka.jpg",
+                Name = "Koszulka",
+                Price = 154.99,
+                ItemCount = 2
+            };
+            await _shoppingService.AddShoppingItem(item);
+            int afterCounter = (await _shoppingService.GetShoppingList()).Count;
+
+            Assert.Equal(beforeCounter + 1, afterCounter);
+        }
+
+        [Fact]
+        public async void AddShoppingItemPerWeightTest()
+        {
+            int beforeCounter = (await _shoppingService.GetShoppingList()).Count;
+            var item = new ShoppingItemPerWeight
+            {
+                ShoppingId = 2,
+                ImgPath = "banany.jpg",
+                Name = "Banany",
+                Price = 7,
+                ItemAmount = 0.5
+            };
+            await _shoppingService.AddShoppingItem(item);
+
+            var list = await _shoppingService.GetShoppingList();
+            int afterCounter = list.Count;
+
+            Assert.Equal(beforeCounter + 1, afterCounter);
+
+            Assert.NotEmpty(list);
+        }
+
+        [Fact]
+        public async void DeleteShoppingItem()
+        {
+            int beforeCounter = (await _shoppingService.GetShoppingList()).Count;
+            var item = new ShoppingItemPerWeight
+            {
+                ShoppingId = 2,
+                ImgPath = "banany.jpg",
+                Name = "Banany",
+                Price = 7,
+                ItemAmount = 0.5
+            };
+            await _shoppingService.AddShoppingItem(item);
+            int afterCounter = (await _shoppingService.GetShoppingList()).Count;
+
+            Assert.Equal(beforeCounter + 1, afterCounter);
+
+            await _shoppingService.DeleteShoppingItem(item);
+
+            afterCounter = (await _shoppingService.GetShoppingList()).Count;
+
+            Assert.Equal(beforeCounter, afterCounter);
+        }
+
+        [Fact]
+        public async void UpdateShoppingItem()
+        {
+            var item = new ShoppingItemPerWeight
+            {
+                ShoppingId = 2,
+                ImgPath = "banany.jpg",
+                Name = "Banany",
+                Price = 7,
+                ItemAmount = 0.5
+            };
+
+            await _shoppingService.AddShoppingItem(item);
+
+            item.Name = "Banany2";
+
+            await _shoppingService.EditShoppingItem(item);
+
+            var itemAfterUpdate = (await _shoppingService.GetShoppingList())
+                .FirstOrDefault(x => x.ShoppingId == item.ShoppingId);
+
+            Assert.NotNull(itemAfterUpdate);
+            Assert.Equal(itemAfterUpdate?.Name, "Banany2");
+            Assert.NotEqual(itemAfterUpdate?.Name, "Banany");
+        }
+
+        [Fact]
+        public async void ClearShoppingItems()
+        {
+            var item = new ShoppingItemPerWeight
+            {
+                ShoppingId = 2,
+                ImgPath = "banany.jpg",
+                Name = "Banany",
+                Price = 7,
+                ItemAmount = 0.5
+            };
+
+            await _shoppingService.AddShoppingItem(item);
+
+            var list = await _shoppingService.GetShoppingList();
+
+            Assert.NotEmpty(list);
+
+            await _shoppingService.ClearShoppingList();
+
+            list = await _shoppingService.GetShoppingList();
+
+            Assert.Empty(list);
+        }
+
+        [Fact]
+        public async void GetShoppingItems()
+        {
+            await _shoppingService.ClearShoppingList();
+
+            var list = await _shoppingService.GetShoppingList();
+
+            Assert.Empty(list);
+
+            var item = new ShoppingItemPerWeight
+            {
+                ShoppingId = 2,
+                ImgPath = "banany.jpg",
+                Name = "Banany",
+                Price = 7,
+                ItemAmount = 0.5
+            };
+
+            await _shoppingService.AddShoppingItem(item);
+
+            var counter = (await _shoppingService.GetShoppingList()).Count;
+            Assert.Equal(counter, 1);
+            var item2 = new ShoppingItemPerPcs
+            {
+                ShoppingId = 1,
+                ImgPath = "koszulka.jpg",
+                Name = "Koszulka",
+                Price = 154.99,
+                ItemCount = 2
+            };
+
+            await _shoppingService.AddShoppingItem(item2);
+
+            counter = (await _shoppingService.GetShoppingList()).Count;
+
+            Assert.Equal(counter, 2);
         }
     }
 }

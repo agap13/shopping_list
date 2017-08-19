@@ -14,8 +14,6 @@ C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\MvvmCross.Platform.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\MvvmCross.Platform.Droid.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\MvvmCross.Plugins.Json.dll
-C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\MvvmCross.Plugins.Visibility.dll
-C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\MvvmCross.Plugins.Visibility.Droid.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Newtonsoft.Json.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll
 C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Droid\obj\Debug\android\assets\Plugin.Settings.dll

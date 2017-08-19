@@ -1,9 +1,4 @@
-﻿// ---------------------------------------------------------------
-// <author>Paul Datsyuk</author>
-// <url>https://www.linkedin.com/in/pauldatsyuk/</url>
-// ---------------------------------------------------------------
-
-using System;
+﻿using System;
 using Xamarin.Forms;
 
 namespace Shopping.Core.Behaviors

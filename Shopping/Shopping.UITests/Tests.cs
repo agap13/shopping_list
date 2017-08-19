@@ -1,15 +1,10 @@
-﻿// ---------------------------------------------------------------
-// <author>Paul Datsyuk</author>
-// <url>https://www.linkedin.com/in/pauldatsyuk/</url>
-// ---------------------------------------------------------------
-
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Xamarin.UITest;
 
 namespace Shopping.UITests
 {
     [TestFixture(Platform.Android, Category = "Andorid")]
-    [TestFixture(Platform.iOS, Category = "iOS")]
+    //[TestFixture(Platform.iOS, Category = "iOS")]
     public class Tests
     {
         IApp app;

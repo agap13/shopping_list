@@ -1,9 +1,4 @@
-﻿// ---------------------------------------------------------------
-// <author>Paul Datsyuk</author>
-// <url>https://www.linkedin.com/in/pauldatsyuk/</url>
-// ---------------------------------------------------------------
-
-using MvvmCross.Platform;
+﻿using MvvmCross.Platform;
 using System;
 using System.Globalization;
 using Xamarin.Forms;

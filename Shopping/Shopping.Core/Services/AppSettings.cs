@@ -1,9 +1,4 @@
-﻿// ---------------------------------------------------------------
-// <author>Paul Datsyuk</author>
-// <url>https://www.linkedin.com/in/pauldatsyuk/</url>
-// ---------------------------------------------------------------
-
-using Plugin.Settings.Abstractions;
+﻿using Plugin.Settings.Abstractions;
 
 namespace Shopping.Core.Services
 {

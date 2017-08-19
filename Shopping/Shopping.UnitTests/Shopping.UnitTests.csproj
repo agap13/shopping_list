@@ -78,13 +78,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shopping.Core\Shopping.Core.csproj">
-      <Project>{74043e51-ef7b-4ce1-af3f-7612ed1d05b6}</Project>
-      <Name>Shopping.Core</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Shopping.Core\Shopping.Core.csproj">
+      <Project>{48e61970-5441-4f37-8aa5-2c433d618300}</Project>
+      <Name>Shopping.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
