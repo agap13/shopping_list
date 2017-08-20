@@ -6,7 +6,7 @@
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
                     xmlns:local="clr-namespace:Shopping.Core.Converters"
                     xmlns:controls="clr-namespace:Shopping.Core.Controls;assembly=Shopping.Core"
-                    BackgroundColor="White">
+                    BackgroundColor="White" >
     <ContentPage.Resources>
 
         <ResourceDictionary>
@@ -24,7 +24,7 @@
             </Grid.RowDefinitions>
         </Grid>
         <StackLayout Grid.Row="3" Grid.Column="0" Margin="170,20,20,10">
-            <Label Text="Lista zakupów: " TextColor="Black" />
+            <Label AutomationId="ShoppingListLabel" Text="Lista zakupów: " TextColor="Black" />
         </StackLayout>
 
         <StackLayout Grid.Row="2" Grid.Column="0">
@@ -51,13 +51,13 @@
                                            Grid.Column="2" YAlign="End" XAlign="Center" TextColor="Black" />
                                     <Label Text="{Binding Price, StringFormat='{0} zl'}" Grid.Row="0" Grid.Column="3"
                                            YAlign="End" TextColor="Black" />
-                                    <Image Source="editIcon.png" Grid.Column="4" WidthRequest="20">
+                                    <Image AutomationId="EditImage" Source="editIcon.png" Grid.Column="4" WidthRequest="20">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding Path = BindingContext.EditItemCommand,Source={x:Reference Name=ListView}}"
                                                 CommandParameter="{Binding .}"/>
                                         </Image.GestureRecognizers>
                                     </Image>
-                                    <Image Source="removeIcon.png" Grid.Column="5" WidthRequest="20">
+                                    <Image AutomationId="RemoveImage" Source="removeIcon.png" Grid.Column="5" WidthRequest="20">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding Path = BindingContext.RemoveItemCommand,Source={x:Reference Name=ListView}}"
                                                                   CommandParameter="{Binding .}"/>
@@ -71,13 +71,13 @@
                 </ListView.ItemTemplate>
             </ListView>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Suma: " TextColor="Red" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Start"/>
-                <Label Text="{Binding PriceSum}" FontAttributes="Bold" FontSize="Large" TextColor="Black" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
-                <Label Text="zł" FontAttributes="Bold" FontSize="Large" TextColor="Black" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
+                <Label AutomationId="SumLabel" Text="Suma: " TextColor="Red" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Start"/>
+                <Label AutomationId="PriceLabel" Text="{Binding PriceSum}" FontAttributes="Bold" FontSize="Large" TextColor="Black" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
+                <Label AutomationId="UnitLabel" Text="zł" FontAttributes="Bold" FontSize="Large" TextColor="Black" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
             </StackLayout>
            
-            <Button Text="Dodaj" Command="{Binding AddShoppingListItem}" />
-            <Button Text="Wyczyść liste" Command="{Binding ClearShoppingListCommand}" />
+            <Button AutomationId="AddButton" Text="Dodaj" Command="{Binding AddShoppingListItem}" />
+            <Button AutomationId="ClearButton" Text="Wyczyść liste" Command="{Binding ClearShoppingListCommand}" />
         </StackLayout>
     </ContentView>
 </mvx:MvxContentPage>

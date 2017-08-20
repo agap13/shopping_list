@@ -26,12 +26,12 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="Nazwa: " TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"
+                <Label AutomationId="NameLabel" Text="Nazwa: " TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"
                        VerticalOptions="End" FontSize="Medium" />
                 <Entry Text="{Binding ShoppingItem.Name}" TextColor="Black" Placeholder="Name" WidthRequest="150"
                        Grid.Row="0" Grid.Column="1" VerticalOptions="End" />
 
-                <Label Text="Rodzaj: " Grid.Row="1" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
+                <Label AutomationId="TypeLabel" Text="Rodzaj: " Grid.Row="1" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
                        VerticalOptions="End" FontSize="Medium" />
                 <Picker Title="Wybierz rodzaj zakupu" Grid.Row="1" Grid.Column="1" TextColor="Black"
                         SelectedItem="{Binding SelectedType}">
@@ -42,7 +42,7 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Label Text="Ilość: " Grid.Row="2" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
+                <Label AutomationId="CountLabel" Text="Ilość: " Grid.Row="2" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
                        VerticalOptions="End" FontSize="Medium" />
                 <Entry Text="{Binding AmountCounter}" Grid.Row="2" Grid.Column="1" TextColor="Black"
                        Placeholder="Ilość" WidthRequest="150" VerticalOptions="End">
@@ -55,7 +55,7 @@
                         <local:NumberValidationBehavior/>
                     </Entry.Behaviors>
                 </Entry>-->
-                <Label Text="Cena: " Grid.Row="3" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
+                <Label AutomationId="PriceLabel" Text="Cena: " Grid.Row="3" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
                        VerticalOptions="End" FontSize="Medium" />
                 <Entry Text="{Binding ShoppingItem.Price}" Grid.Row="3" Grid.Column="1" TextColor="Black"
                        Placeholder="Cena" WidthRequest="150" VerticalOptions="End">
@@ -64,7 +64,7 @@
                     </Entry.Behaviors>
                 </Entry>
             </Grid>
-            <Button Text="Dodaj przedmiot do listy" Command="{Binding AddShoppingItemCmd}" />
+            <Button AutomationId="AddItemToList" Text="Dodaj przedmiot do listy" Command="{Binding AddShoppingItemCmd}" />
             <Label Text="{Binding ErrorMessage}"
                    TextColor="Red" FontAttributes="Bold" HorizontalTextAlignment="Center" />
         </StackLayout>

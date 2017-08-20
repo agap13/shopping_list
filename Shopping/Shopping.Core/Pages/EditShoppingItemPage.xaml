@@ -46,7 +46,7 @@
                     </Entry.Behaviors>
                 </Entry>
             </Grid>
-            <Button Text="Zapisz" Command="{Binding EditShoppingItemCmd}"/>
+            <Button AutomationId="SaveButton" Text="Zapisz" Command="{Binding EditShoppingItemCmd}"/>
             <Label Text="{Binding ErrorMessage}" HorizontalTextAlignment="Center" TextColor="Red" FontAttributes="Bold"/>
         </StackLayout>
     </ContentView>

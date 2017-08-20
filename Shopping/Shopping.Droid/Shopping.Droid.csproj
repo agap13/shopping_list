@@ -32,7 +32,7 @@
     <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
     <Debugger>Xamarin</Debugger>
     <RunCodeAnalysis>false</RunCodeAnalysis>
-    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidLinkSkip />
     <BundleAssemblies>False</BundleAssemblies>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
@@ -48,8 +48,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <Debugger>Xamarin</Debugger>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>

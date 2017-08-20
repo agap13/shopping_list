@@ -1,0 +1,121 @@
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Shopping.Core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Shopping.Core.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\ru-RU\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\en-US\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\de-DE\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Acr.UserDialogs.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Acr.UserDialogs.Interface.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Binding.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Forms.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Localization.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Platform.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Plugins.Json.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.Abstractions.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Splat.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\SQLite-net.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\SQLitePCLRaw.batteries_green.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\SQLitePCLRaw.batteries_v2.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\SQLitePCLRaw.core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Platform.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Xaml.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Acr.UserDialogs.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Acr.UserDialogs.Interface.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Binding.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Core.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Forms.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Localization.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Platform.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Plugins.Json.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.Abstractions.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.Abstractions.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\SQLite-net.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\SQLite-net.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Core.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Core.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Platform.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Xaml.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Xaml.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.ua-UK.resources
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.resources
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.ru-RU.resources
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.en-US.resources
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.de-DE.resources
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.csproj.GenerateResource.Cache
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Pages.MainPage.xaml.g.cs
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.FormsApp.xaml.g.cs
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Pages.ShoppingListPage.xaml.g.cs
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Pages.AddShoppingItemPage.xaml.g.cs
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Pages.EditShoppingItemPage.xaml.g.cs
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\ru-RU\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\en-US\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\de-DE\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Shopping.Core.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Shopping.Core.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\ru-RU\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\en-US\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\de-DE\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Acr.UserDialogs.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Acr.UserDialogs.Interface.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Binding.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Core.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Forms.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Localization.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Platform.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Plugins.Json.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Newtonsoft.Json.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.Abstractions.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Splat.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\SQLite-net.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\SQLitePCLRaw.batteries_green.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\SQLitePCLRaw.batteries_v2.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\SQLitePCLRaw.core.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Core.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Platform.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Xaml.dll
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Acr.UserDialogs.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Acr.UserDialogs.Interface.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Binding.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Core.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Forms.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Localization.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Platform.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Plugins.Json.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Newtonsoft.Json.xml
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.xml
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.Abstractions.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Plugin.Settings.Abstractions.xml
+H:\Shopping\Shopping\Shopping.Core\bin\Release\SQLite-net.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\SQLite-net.xml
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Core.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Core.xml
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Platform.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Xaml.pdb
+H:\Shopping\Shopping\Shopping.Core\bin\Release\Xamarin.Forms.Xaml.xml
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.ua-UK.resources
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.resources
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.ru-RU.resources
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.en-US.resources
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Resources.AppResources.de-DE.resources
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.csproj.GenerateResource.Cache
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Pages.MainPage.xaml.g.cs
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.FormsApp.xaml.g.cs
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Pages.ShoppingListPage.xaml.g.cs
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Pages.AddShoppingItemPage.xaml.g.cs
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.Pages.EditShoppingItemPage.xaml.g.cs
+H:\Shopping\Shopping\Shopping.Core\obj\Release\ru-RU\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.Core\obj\Release\en-US\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.Core\obj\Release\de-DE\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.dll
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.pdb
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.csprojResolveAssemblyReference.cache

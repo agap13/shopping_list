@@ -1,0 +1,110 @@
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.abstractions.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.runner.visualstudio.testadapter.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.runner.utility.net35.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.runner.reporters.net452.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Shopping.UnitTests.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Shopping.UnitTests.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Platform.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Platform.Wpf.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Wpf.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Shopping.Core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.assert.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.execution.desktop.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Xaml.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Forms.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Acr.UserDialogs.Interface.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Plugin.Settings.Abstractions.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLite-net.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Acr.UserDialogs.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Binding.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Splat.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Platform.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLitePCLRaw.core.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLitePCLRaw.batteries_v2.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Localization.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Shopping.Core.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Core.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Platform.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Platform.Wpf.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Wpf.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.assert.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.core.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.execution.desktop.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Xaml.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Xaml.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Forms.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Acr.UserDialogs.Interface.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Plugin.Settings.Abstractions.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Plugin.Settings.Abstractions.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Core.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Core.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLite-net.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLite-net.xml
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Acr.UserDialogs.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Binding.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Platform.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Localization.pdb
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\de-DE\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\en-US\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\bin\Release\ru-RU\Shopping.Core.resources.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\obj\Release\Shopping.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\obj\Release\Shopping.UnitTests.dll
+C:\Users\agna1\OneDrive\Dokumenty\Visual Studio 2017\Projects\Shopping\Shopping\Shopping.UnitTests\obj\Release\Shopping.UnitTests.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.runner.visualstudio.testadapter.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.runner.utility.net35.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.runner.reporters.net452.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.abstractions.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Shopping.UnitTests.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Shopping.UnitTests.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Core.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Platform.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Platform.Wpf.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Wpf.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Shopping.Core.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.assert.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.core.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.execution.desktop.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Xaml.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Forms.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Acr.UserDialogs.Interface.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Plugin.Settings.Abstractions.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Core.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLite-net.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Acr.UserDialogs.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Binding.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Splat.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Platform.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLitePCLRaw.core.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLitePCLRaw.batteries_v2.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Localization.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Shopping.Core.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Core.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Platform.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Platform.Wpf.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Wpf.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.assert.xml
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.core.xml
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\xunit.execution.desktop.xml
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Xaml.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Xaml.xml
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Forms.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Acr.UserDialogs.Interface.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Plugin.Settings.Abstractions.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Plugin.Settings.Abstractions.xml
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Core.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Core.xml
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLite-net.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\SQLite-net.xml
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Acr.UserDialogs.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Binding.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\Xamarin.Forms.Platform.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\MvvmCross.Localization.pdb
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\de-DE\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\en-US\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.UnitTests\bin\Release\ru-RU\Shopping.Core.resources.dll
+H:\Shopping\Shopping\Shopping.UnitTests\obj\Release\Shopping.UnitTests.csprojResolveAssemblyReference.cache
+H:\Shopping\Shopping\Shopping.UnitTests\obj\Release\Shopping.UnitTests.dll
+H:\Shopping\Shopping\Shopping.UnitTests\obj\Release\Shopping.UnitTests.pdb
