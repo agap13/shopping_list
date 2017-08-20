@@ -14,7 +14,7 @@
     </ContentPage.Resources>
     <ContentView>
         <StackLayout Orientation="Vertical">
-            <Image Source="zakupy.jpg" VerticalOptions="Fill" HorizontalOptions="Start" />
+            <Image Source="zakupy.jpg" VerticalOptions="Fill" HorizontalOptions="Start" HeightRequest="150" />
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />

@@ -14,4 +14,3 @@ H:\Shopping\Shopping.UITests\bin\Release\nunit.framework.xml
 H:\Shopping\Shopping.UITests\bin\Release\Xamarin.UITest.xml
 H:\Shopping\Shopping.UITests\obj\Release\Shopping.UITests.dll
 H:\Shopping\Shopping.UITests\obj\Release\Shopping.UITests.pdb
-H:\Shopping\Shopping.UITests\obj\Release\Shopping.UITests.csprojResolveAssemblyReference.cache

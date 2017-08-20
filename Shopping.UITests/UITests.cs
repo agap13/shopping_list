@@ -24,8 +24,9 @@ namespace Shopping.UITests
         [Test]
         public void AddButtonClicked()
         {
+            app.WaitForElement(c => c.Marked("ShoppingListButton"), "Timeout", new TimeSpan(0, 0, 1, 0));
             app.Tap(app.Query("ShoppingListButton")[0].Text);
-            app.WaitForElement(c => c.Marked("Dodaj"));
+            app.WaitForElement(c => c.Marked("Dodaj"), "Timeout", new TimeSpan(0, 0, 3, 0));
 
             app.Tap(app.Query("AddButton")[0].Text);
 
@@ -45,6 +46,7 @@ namespace Shopping.UITests
         [Test]
         public void DisplayShoppingListButton()
         {
+            app.WaitForElement(c => c.Marked("ShoppingListButton"), "Timeout", new TimeSpan(0, 0, 1, 0));
             app.Tap(app.Query("ShoppingListButton")[0].Text);
             app.WaitForElement(c => c.Marked("Dodaj"));
             Assert.AreEqual("Suma: ", app.Query("SumLabel")[0].Text);
@@ -56,6 +58,7 @@ namespace Shopping.UITests
         [Test]
         public void FirstScreenButtonText()
         {
+            app.WaitForElement(c => c.Marked("ShoppingListButton"), "Timeout", new TimeSpan(0, 0, 1, 0));
             Assert.AreEqual("Lista zakupów", app.Query("ShoppingListButton")[0].Text);
         }
     }
