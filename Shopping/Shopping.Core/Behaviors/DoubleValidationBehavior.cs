@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Globalization;
+using Xamarin.Forms;
 
 namespace Shopping.Core.Behaviors
 {
@@ -42,7 +43,7 @@ namespace Shopping.Core.Behaviors
         private void OnEntryTextChanged(object sender, TextChangedEventArgs args)
         {
             double result;
-            IsValid = double.TryParse(args.NewTextValue, out result);
+            IsValid = double.TryParse(args.NewTextValue, NumberStyles.Number, CultureInfo.InvariantCulture, out result);//(args.NewTextValue,  out result);
             ((Entry) sender).TextColor = IsValid ? Color.Black : Color.Red;
         }
     }
