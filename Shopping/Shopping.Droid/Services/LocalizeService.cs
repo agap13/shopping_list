@@ -1,9 +1,4 @@
-﻿// ---------------------------------------------------------------
-// <author>Paul Datsyuk</author>
-// <url>https://www.linkedin.com/in/pauldatsyuk/</url>
-// ---------------------------------------------------------------
-
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Globalization;
 
 namespace Shopping.Droid.Services

@@ -4,11 +4,11 @@
              xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms" 
              xmlns:conv="clr-namespace:Shopping.Core.Converters"
              xmlns:local="clr-namespace:Shopping.Core.Behaviors"     
-             x:Class="Shopping.Core.Pages.EditShoppingItemPage" BackgroundColor ="White">
+             x:Class="Shopping.Core.Pages.EditShoppingItemPage" BackgroundColor ="White" Title="Edycja przedmiotu">
     <ContentPage.Resources>
         <ResourceDictionary>
             <conv:InverseBooleanConverter x:Key="invert"/>
-            <conv:ShoppingTypeToBoolConverter x:Key="typeConv"/>
+            <conv:ShoppingTypeToStringConverter x:Key="typeConv"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentView>

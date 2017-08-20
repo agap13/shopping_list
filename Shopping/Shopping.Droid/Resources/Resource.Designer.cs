@@ -2894,22 +2894,22 @@ namespace Shopping.Droid
 			public const int notify_panel_notification_icon_bg = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int pytajnik = 2130837778;
+			public const int removeIcon = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int removeIcon = 2130837779;
+			public const int roundedbg = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int roundedbg = 2130837780;
+			public const int roundedbgdark = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int roundedbgdark = 2130837781;
+			public const int splash = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int splash = 2130837782;
+			public const int sukienka = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int sukienka = 2130837783;
+			public const int zakupy = 2130837783;
 			
 			static Drawable()
 			{

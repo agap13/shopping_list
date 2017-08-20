@@ -1,9 +1,4 @@
-﻿// ---------------------------------------------------------------
-// <author>Paul Datsyuk</author>
-// <url>https://www.linkedin.com/in/pauldatsyuk/</url>
-// ---------------------------------------------------------------
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using MvvmCross.Droid.Views;
 using Xamarin.Forms;

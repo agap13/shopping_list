@@ -6,11 +6,11 @@ using Xunit;
 
 namespace Shopping.UnitTests
 {
-    public class Tests
+    public class CrudTests
     {
         private IShoppingService _shoppingService;
 
-        public Tests()
+        public CrudTests()
         {
             _shoppingService = new ShoppingServiceStub();
         }
@@ -28,9 +28,13 @@ namespace Shopping.UnitTests
                 ItemCount = 2
             };
             await _shoppingService.AddShoppingItem(item);
-            int afterCounter = (await _shoppingService.GetShoppingList()).Count;
+
+            var shoppingList = await _shoppingService.GetShoppingList();
+            int afterCounter = shoppingList.Count;
 
             Assert.Equal(beforeCounter + 1, afterCounter);
+
+            Assert.NotEmpty(shoppingList);
         }
 
         [Fact]
@@ -47,12 +51,12 @@ namespace Shopping.UnitTests
             };
             await _shoppingService.AddShoppingItem(item);
 
-            var list = await _shoppingService.GetShoppingList();
-            int afterCounter = list.Count;
+            var shoppingList = await _shoppingService.GetShoppingList();
+            int afterCounter = shoppingList.Count;
 
             Assert.Equal(beforeCounter + 1, afterCounter);
 
-            Assert.NotEmpty(list);
+            Assert.NotEmpty(shoppingList);
         }
 
         [Fact]
@@ -119,15 +123,15 @@ namespace Shopping.UnitTests
 
             await _shoppingService.AddShoppingItem(item);
 
-            var list = await _shoppingService.GetShoppingList();
+            var shoppingList = await _shoppingService.GetShoppingList();
 
-            Assert.NotEmpty(list);
+            Assert.NotEmpty(shoppingList);
 
             await _shoppingService.ClearShoppingList();
 
-            list = await _shoppingService.GetShoppingList();
+            shoppingList = await _shoppingService.GetShoppingList();
 
-            Assert.Empty(list);
+            Assert.Empty(shoppingList);
         }
 
         [Fact]
@@ -135,9 +139,9 @@ namespace Shopping.UnitTests
         {
             await _shoppingService.ClearShoppingList();
 
-            var list = await _shoppingService.GetShoppingList();
+            var shoppingList = await _shoppingService.GetShoppingList();
 
-            Assert.Empty(list);
+            Assert.Empty(shoppingList);
 
             var item = new ShoppingItemPerWeight
             {

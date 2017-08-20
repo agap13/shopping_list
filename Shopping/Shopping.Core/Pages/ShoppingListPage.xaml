@@ -5,8 +5,7 @@
                     x:Class="Shopping.Core.Pages.ShoppingListPage"
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
                     xmlns:local="clr-namespace:Shopping.Core.Converters"
-                    xmlns:controls="clr-namespace:Shopping.Core.Controls;assembly=Shopping.Core"
-                    BackgroundColor="White" >
+                    BackgroundColor="White" Title="Lista zakupów">
     <ContentPage.Resources>
 
         <ResourceDictionary>
@@ -51,15 +50,15 @@
                                            Grid.Column="2" YAlign="End" XAlign="Center" TextColor="Black" />
                                     <Label Text="{Binding Price, StringFormat='{0} zl'}" Grid.Row="0" Grid.Column="3"
                                            YAlign="End" TextColor="Black" />
-                                    <Image AutomationId="EditImage" Source="editIcon.png" Grid.Column="4" WidthRequest="20">
+                                    <Image  Source="editIcon.png" Grid.Column="4" WidthRequest="20">
                                         <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path = BindingContext.EditItemCommand,Source={x:Reference Name=ListView}}"
+                                            <TapGestureRecognizer AutomationId="EditImage" Command="{Binding Path = BindingContext.EditItemCommand,Source={x:Reference Name=ListView}}"
                                                 CommandParameter="{Binding .}"/>
                                         </Image.GestureRecognizers>
                                     </Image>
-                                    <Image AutomationId="RemoveImage" Source="removeIcon.png" Grid.Column="5" WidthRequest="20">
+                                    <Image Source="removeIcon.png" Grid.Column="5" WidthRequest="20">
                                         <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path = BindingContext.RemoveItemCommand,Source={x:Reference Name=ListView}}"
+                                            <TapGestureRecognizer  AutomationId="RemoveImage" Command="{Binding Path = BindingContext.RemoveItemCommand,Source={x:Reference Name=ListView}}"
                                                                   CommandParameter="{Binding .}"/>
                                         </Image.GestureRecognizers>
                                     </Image>

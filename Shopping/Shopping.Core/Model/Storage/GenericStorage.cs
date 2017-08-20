@@ -10,6 +10,9 @@ using Xamarin.Forms;
 
 namespace Shopping.Core.Model.Storage
 {
+    /// <summary>
+    /// Class used to store database operations.
+    /// </summary>
     public class GenericStorage : IGenericStorage
     {
         private readonly SQLiteAsyncConnection _dbAsyncConnection;

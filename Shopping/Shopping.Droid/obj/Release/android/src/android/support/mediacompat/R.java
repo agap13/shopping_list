@@ -3164,12 +3164,12 @@ containing a value of this type.
         public static final int notification_template_icon_low_bg=0x7f020119;
         public static final int notification_tile_bg=0x7f020110;
         public static final int notify_panel_notification_icon_bg=0x7f020111;
-        public static final int pytajnik=0x7f020112;
-        public static final int removeicon=0x7f020113;
-        public static final int roundedbg=0x7f020114;
-        public static final int roundedbgdark=0x7f020115;
-        public static final int splash=0x7f020116;
-        public static final int sukienka=0x7f020117;
+        public static final int removeicon=0x7f020112;
+        public static final int roundedbg=0x7f020113;
+        public static final int roundedbgdark=0x7f020114;
+        public static final int splash=0x7f020115;
+        public static final int sukienka=0x7f020116;
+        public static final int zakupy=0x7f020117;
     }
     public static final class id {
         public static final int MvvmCrossTagId=0x7f08000f;

@@ -14,11 +14,5 @@ namespace Shopping.Core.Services
         {
             _settings = settings;
         }
-
-        public int SuperNumber
-        {
-            get { return _settings.GetValueOrDefault(SuperNumberKey, 1); }
-            set { _settings.AddOrUpdateValue(SuperNumberKey, value); }
-        }
     }
 }

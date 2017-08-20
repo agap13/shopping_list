@@ -7,6 +7,9 @@ using Shopping.Core.Services;
 
 namespace Shopping.Core.ViewModels
 {
+    /// <summary>
+    /// VieModel used to edit selected shopping item.
+    /// </summary>
     public class EditShoppingItemViewModel : MvxViewModel<ShoppingItemEntity>
     {
         private readonly IMvxNavigationService _navigationService;
@@ -18,10 +21,16 @@ namespace Shopping.Core.ViewModels
             _navigationService = navigationService;
         }
 
+        /// <summary>
+        /// Used to stored selected item.
+        /// </summary>
         public ShoppingItemEntity ShoppingItem { get; set; }
 
         public double AmountCounter { get; set; }
 
+        /// <summary>
+        /// Used for price validation.
+        /// </summary>
         private bool _isValidPrice = true;
         public bool IsValidPrice
         {
@@ -37,6 +46,9 @@ namespace Shopping.Core.ViewModels
             }
         }
 
+        /// <summary>
+        /// Used for itemcount validation.
+        /// </summary>
         private bool _isValidNumber = true;
         public bool IsValidNumber
         {
@@ -52,6 +64,9 @@ namespace Shopping.Core.ViewModels
             }
         }
 
+        /// <summary>
+        /// Store message with information about validation errors.
+        /// </summary>
         public string ErrorMessage { get; set; } = string.Empty;
 
         public override async Task Initialize(ShoppingItemEntity parameter)
@@ -60,8 +75,13 @@ namespace Shopping.Core.ViewModels
             AmountCounter = ShoppingItem is ShoppingItemPerPcs
                 ? (ShoppingItem as ShoppingItemPerPcs).ItemCount
                 : (ShoppingItem as ShoppingItemPerWeight).ItemAmount;
+
         }
 
+        /// <summary>
+        /// Execute when save button is clicked.
+        /// Modified item is insert to database and send to ShoppingListPage
+        /// </summary>
         public IMvxAsyncCommand EditShoppingItemCmd => new MvxAsyncCommand(EditShoppingItem);
 
         private async Task EditShoppingItem()

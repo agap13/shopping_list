@@ -2,6 +2,9 @@
 
 namespace Shopping.Core.Behaviors
 {
+    /// <summary>
+    /// Class used to valid ItemCount in ShoppingItemPerPcs
+    /// </summary>
     public class NumberValidationBehavior : Behavior<Entry>
     {
         public static readonly BindableProperty IsValidProperty =

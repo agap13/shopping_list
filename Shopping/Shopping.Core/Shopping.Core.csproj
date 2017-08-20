@@ -42,6 +42,7 @@
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Converters\ShoppingCounterDisplayConverter.cs" />
     <Compile Include="Converters\ShoppingTypeToBoolConverter.cs" />
+    <Compile Include="Converters\ShoppingTypeToStringConverter.cs" />
     <Compile Include="FormsApp.xaml.cs">
       <DependentUpon>FormsApp.xaml</DependentUpon>
     </Compile>
@@ -129,6 +130,9 @@
     <Reference Include="MvvmCross.Plugins.Json, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MvvmCross.Plugin.Json.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Json.dll</HintPath>
     </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Visibility.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -214,7 +218,7 @@
     <Folder Include="CustomViews\" />
     <Folder Include="Helpers\" />
     <Folder Include="Repository\" />
-    <Folder Include="Triggers\" />
+    <Folder Include="Services\Triggers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />

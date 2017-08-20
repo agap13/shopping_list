@@ -2,6 +2,5 @@
 {
     public interface IAppSettings
     {
-        int SuperNumber { get; set; }
     }
 }

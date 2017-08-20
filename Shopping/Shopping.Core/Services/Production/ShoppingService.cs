@@ -6,6 +6,9 @@ using Shopping.Core.Model.Storage.Interfaces;
 
 namespace Shopping.Core.Services.Production
 {
+    /// <summary>
+    /// Implemnetation of CRUD operation for ShoppingItemEntries.
+    /// </summary>
     public class ShoppingService : IShoppingService
     {
         private readonly IGenericStorage _genericStorage;
@@ -15,6 +18,11 @@ namespace Shopping.Core.Services.Production
             _genericStorage = genericStorage;
         }
 
+        /// <summary>
+        /// Async method for adding new ShoppingItemEntry to database.
+        /// </summary>
+        /// <param name="item">New Shopping item</param>
+        /// <returns>Return task</returns>
         public async Task AddShoppingItem(ShoppingItemEntity item)
         {
             if (item is ShoppingItemPerPcs)
@@ -23,6 +31,10 @@ namespace Shopping.Core.Services.Production
                 await _genericStorage.InsertRow(item as ShoppingItemPerWeight);
         }
 
+        /// <summary>
+        /// Remove all shopping items from database.
+        /// </summary>
+        /// <returns>Return task</returns>
         public async Task ClearShoppingList()
         {
             var shoppingListPerWeight = await _genericStorage.GetRows<ShoppingItemPerWeight>();
@@ -31,6 +43,11 @@ namespace Shopping.Core.Services.Production
             await _genericStorage.DeleteAll(shoppingListPerPcs);
         }
 
+        /// <summary>
+        /// Delete shopping item entry from database.
+        /// </summary>
+        /// <param name="item">Item which should be deleted.</param>
+        /// <returns>Return task.</returns>
         public async Task DeleteShoppingItem(ShoppingItemEntity item)
         {
             if (item is ShoppingItemPerPcs)
@@ -39,6 +56,11 @@ namespace Shopping.Core.Services.Production
                 await _genericStorage.DeleteRow(item as ShoppingItemPerWeight);
         }
 
+        /// <summary>
+        /// Edit existing item and save modification in database.
+        /// </summary>
+        /// <param name="item">Item with modified properties, which should be save in db.</param>
+        /// <returns>Return task.</returns>
         public async Task EditShoppingItem(ShoppingItemEntity item)
         {
             if (item is ShoppingItemPerPcs)
@@ -47,6 +69,10 @@ namespace Shopping.Core.Services.Production
                 await _genericStorage.InsertOrReplaceRow(item as ShoppingItemPerWeight);
         }
 
+        /// <summary>
+        /// Get all ShoppingItemEntries from database.
+        /// </summary>
+        /// <returns>List with database items.</returns>
         public async Task<List<ShoppingItemEntity>> GetShoppingList()
         {
             var listPerPcs = (await _genericStorage.GetRows<ShoppingItemPerPcs>()).ToList();
@@ -58,6 +84,10 @@ namespace Shopping.Core.Services.Production
             return new List<ShoppingItemEntity>(list);
         }
 
+        /// <summary>
+        /// Used to insert few items to database.
+        /// </summary>
+        /// <returns>Return task.</returns>
         public async Task InitDatabase()
         {
             var shoppinglist = new List<ShoppingItemEntity>

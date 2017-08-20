@@ -8,14 +8,20 @@ using Shopping.Core.Services;
 
 namespace Shopping.Core.ViewModels
 {
+    /// <summary>
+    /// ViewModel for adding new shopping item.
+    /// </summary>
     public class AddShoppingItemViewModel : MvxViewModel
     {
+        private const string ItemTypeWeighted = "Na wagę";
+        private const string ItemTypePieces = "Na sztuki";
+
         private readonly IMvxNavigationService _navigationService;
         private readonly IShoppingService _shoppingService;
 
         private int _counter;
 
-        public List<string> ItemTypes = new List<string> {"Na wagę", "Na sztuki"};
+        public List<string> ItemTypes = new List<string> { ItemTypeWeighted, ItemTypePieces };
 
         public AddShoppingItemViewModel(IMvxNavigationService navigationService, IShoppingService shoppingService)
         {
@@ -24,12 +30,19 @@ namespace Shopping.Core.ViewModels
         }
 
         public ShoppingItemEntity ShoppingItem { get; set; } = new ShoppingItemEntity();
+
+        /// <summary>
+        /// String to store selected type.  Possible types are in ItemTypes list.
+        /// </summary>
         public string SelectedType { get; set; }
 
-        public bool IsPerWeightItemVisible => SelectedType.Contains("Na wagę");
+        public bool IsPerWeightItemVisible => SelectedType.Contains(ItemTypeWeighted);
 
         public double AmountCounter { get; set; }
 
+        /// <summary>
+        /// Used to price validation.
+        /// </summary>
         private bool _isValidPrice;
         public bool IsValidPrice
         {
@@ -45,6 +58,9 @@ namespace Shopping.Core.ViewModels
             }
         }
 
+        /// <summary>
+        /// Used to counter validation.
+        /// </summary>
         private bool _isValidNumber;
         public bool IsValidNumber
         {
@@ -60,6 +76,9 @@ namespace Shopping.Core.ViewModels
             }
         }
 
+        /// <summary>
+        /// Used to store message withe errors if validation price/itemcount/itemamount failed.
+        /// </summary>
         public string ErrorMessage { get; set; } = string.Empty;
 
         public override async Task Initialize()
@@ -68,6 +87,9 @@ namespace Shopping.Core.ViewModels
             _counter = list.Count;
         }
 
+        /// <summary>
+        /// Execute when new item is added.
+        /// </summary>
         public IMvxCommand AddShoppingItemCmd => new MvxCommand(AddNewShoppingItem);
 
         private void AddNewShoppingItem()
@@ -84,12 +106,12 @@ namespace Shopping.Core.ViewModels
                 else
                 {
                     item = new ShoppingItemPerPcs();
-                    (item as ShoppingItemPerPcs).ItemCount = (int) AmountCounter; //change
+                    (item as ShoppingItemPerPcs).ItemCount = (int)AmountCounter; 
                 }
 
                 item.Price = ShoppingItem.Price;
                 item.Name = ShoppingItem.Name;
-                item.ImgPath = "pytajnik.jpg";
+                item.ImgPath = "zakupy.jpg";
                 ShoppingItem.ShoppingId = _counter;
 
                 _navigationService.Navigate<ShoppingListViewModel, ShoppingItemEntity>(item);

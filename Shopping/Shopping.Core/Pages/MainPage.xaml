@@ -4,7 +4,7 @@
              x:Class="Shopping.Core.Pages.MainPage"
              xmlns:res="clr-namespace:Shopping.Core.Resources;assembly=Shopping.Core"
              xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"    
-             Title="Main">
+             Title="Storna Główna">
   <Grid>
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>

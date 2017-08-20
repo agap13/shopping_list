@@ -6,6 +6,9 @@ using Shopping.Core.Model.Entities.Interfaces;
 
 namespace Shopping.Core.Model.Storage.Interfaces
 {
+    /// <summary>
+    /// Interface with database operations.
+    /// </summary>
     public interface IGenericStorage
     {
         Task<TEntity> GetRow<TEntity>(object primaryKey) where TEntity : class, IEntity, new();

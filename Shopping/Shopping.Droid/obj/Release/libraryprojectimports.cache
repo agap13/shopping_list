@@ -9,6 +9,7 @@
     <ResolvedResourceDirectory>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\MvvmCross.Droid\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\MvvmCross.Forms.Droid\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\MvvmCross.Platform.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\MvvmCross.Plugins.Visibility.Droid\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\Plugin.Settings\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\Splat\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\SQLitePCLRaw.batteries_green\library_project_imports\res</ResolvedResourceDirectory>
@@ -33,6 +34,7 @@
     <ResolvedAssetDirectory>obj\Release\__library_projects__\MvvmCross.Droid\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\MvvmCross.Forms.Droid\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\MvvmCross.Platform.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Release\__library_projects__\MvvmCross.Plugins.Visibility.Droid\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\Plugin.Settings\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\Splat\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\SQLitePCLRaw.batteries_green\library_project_imports\assets</ResolvedAssetDirectory>
@@ -52,6 +54,7 @@
     <ResolvedResourceDirectoryStamp>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\MvvmCross.Droid.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\MvvmCross.Forms.Droid.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\MvvmCross.Platform.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\MvvmCross.Plugins.Visibility.Droid.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\Splat.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>H:\Shopping\Shopping\Shopping.Droid\obj\Release\__library_projects__\SQLitePCLRaw.batteries_green.stamp</ResolvedResourceDirectoryStamp>

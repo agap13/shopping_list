@@ -2,11 +2,17 @@
 
 namespace Shopping.Core.Behaviors
 {
+    /// <summary>
+    /// Class used to valide price in ShoppingItemEntry or ItemAmount in ShoppingItemPerWeight
+    /// </summary>
     public class DoubleValidationBehavior : Behavior<Entry>
     {
         public static readonly BindableProperty IsValidProperty =
             BindableProperty.Create("IsValid", typeof(bool), typeof(DoubleValidationBehavior), false, BindingMode.TwoWay);
 
+        /// <summary>
+        /// To store valid value
+        /// </summary>
         public bool IsValid
         {
             get => (bool) GetValue(IsValidProperty);

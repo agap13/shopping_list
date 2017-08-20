@@ -1,9 +1,4 @@
-﻿// ---------------------------------------------------------------
-// <author>Paul Datsyuk</author>
-// <url>https://www.linkedin.com/in/pauldatsyuk/</url>
-// ---------------------------------------------------------------
-
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.Windows.Input;
 using Android.App;
 using Android.Views;

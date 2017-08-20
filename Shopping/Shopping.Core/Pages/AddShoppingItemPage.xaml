@@ -5,15 +5,16 @@
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
                     xmlns:local="clr-namespace:Shopping.Core.Behaviors"
                     xmlns:conv="clr-namespace:Shopping.Core.Converters"
-                    x:Class="Shopping.Core.Pages.AddShoppingItemPage" BackgroundColor="White">
+                    x:Class="Shopping.Core.Pages.AddShoppingItemPage" BackgroundColor="White" Title="Dodawanie przedmiotu">
     <ContentPage.Resources>
         <ResourceDictionary>
             <conv:InverseBooleanConverter x:Key="invert" />
+            <conv:ShoppingTypeToBoolConverter x:Key="typeToBool"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentView>
         <StackLayout Orientation="Vertical">
-            <Image Source="pytajnik.jpg" VerticalOptions="Fill" HorizontalOptions="Start" />
+            <Image Source="zakupy.jpg" VerticalOptions="Fill" HorizontalOptions="Start" />
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -44,17 +45,18 @@
                 </Picker>
                 <Label AutomationId="CountLabel" Text="Ilość: " Grid.Row="2" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
                        VerticalOptions="End" FontSize="Medium" />
-                <Entry Text="{Binding AmountCounter}" Grid.Row="2" Grid.Column="1" TextColor="Black"
+                <Entry IsVisible="{Binding SelectedType, Converter={StaticResource typeToBool}, ConverterParameter='Na wagę'}"  Text="{Binding AmountCounter}" Grid.Row="2" Grid.Column="1" TextColor="Black"
                        Placeholder="Ilość" WidthRequest="150" VerticalOptions="End">
                     <Entry.Behaviors>
                         <local:DoubleValidationBehavior IsValid="{Binding IsValidNumber}" />
                     </Entry.Behaviors>
                 </Entry>
-                <!--<Entry IsVisible="{Binding IsPerWeightItemVisible,Converter={StaticResource invert}}" Text="{Binding ShoppingItem.ItemCount}" Grid.Row="2" Grid.Column="1" TextColor="Black" Placeholder="Ilość" WidthRequest="150" VerticalOptions="End">
+                <Entry IsVisible="{Binding SelectedType, Converter={StaticResource typeToBool}, ConverterParameter='Na sztuki'}"  Text="{Binding AmountCounter}" Grid.Row="2" Grid.Column="1" TextColor="Black"
+                       Placeholder="Ilość" WidthRequest="150" VerticalOptions="End">
                     <Entry.Behaviors>
-                        <local:NumberValidationBehavior/>
+                        <local:NumberValidationBehavior IsValid="{Binding IsValidNumber}"/>
                     </Entry.Behaviors>
-                </Entry>-->
+                </Entry>
                 <Label AutomationId="PriceLabel" Text="Cena: " Grid.Row="3" Grid.Column="0" TextColor="Black" FontAttributes="Bold"
                        VerticalOptions="End" FontSize="Medium" />
                 <Entry Text="{Binding ShoppingItem.Price}" Grid.Row="3" Grid.Column="1" TextColor="Black"

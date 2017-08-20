@@ -14,6 +14,8 @@ H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\MvvmCross.Localiz
 H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\MvvmCross.Platform.dll
 H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\MvvmCross.Platform.Droid.dll
 H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\MvvmCross.Plugins.Json.dll
+H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\MvvmCross.Plugins.Visibility.dll
+H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\MvvmCross.Plugins.Visibility.Droid.dll
 H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\Newtonsoft.Json.dll
 H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\Plugin.Settings.Abstractions.dll
 H:\Shopping\Shopping\Shopping.Droid\obj\Release\android\assets\Plugin.Settings.dll
