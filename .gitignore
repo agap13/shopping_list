@@ -209,6 +209,13 @@ ModelManifest.xml
 !src/ExternalLibraries/xamarin.auth/ios-unified/*
 
 
+**/*.Droid/obj/*
+**/*.UnitTests/obj/*
+**/*.UnitTests/bin/*
+**/*.UnitTests/bin/Release/*
+**/*.UITests/obj/*
+**/*.UITests/bin/*
+**/*.UITests/bin/Release/*
 # ignore Xamarin.Android Resource.Designer.cs files
 **/*.Droid/**/[Rr]esource.[Dd]esigner.cs
 **/*.Android/**/[Rr]esource.[Dd]esigner.cs
