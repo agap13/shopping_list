@@ -41,6 +41,8 @@ TestResult.xml
 [Dd]ebugPS/
 [Rr]eleasePS/
 dlldata.c
+bin/
+obj/
 
 *_i.c
 *_p.c
@@ -66,6 +68,7 @@ dlldata.c
 *.pidb
 *.svclog
 *.scc
+*.cache*.tmp
 
 # Chutzpah Test files
 _Chutzpah*
@@ -217,3 +220,5 @@ ModelManifest.xml
 .DS_Store
 
 \.idea/
+bin
+obj
