@@ -120,3 +120,4 @@ H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.dll
 H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.pdb
 H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Plugins.Visibility.dll
 H:\Shopping\Shopping\Shopping.Core\bin\Release\MvvmCross.Plugins.Visibility.pdb
+H:\Shopping\Shopping\Shopping.Core\obj\Release\Shopping.Core.csprojResolveAssemblyReference.cache
