@@ -7,7 +7,7 @@ using Shopping.Core.Model.Entities.Interfaces;
 namespace Shopping.Core.Model.Storage.Interfaces
 {
     /// <summary>
-    /// Interface with database operations.
+    /// Interface for database operations.
     /// </summary>
     public interface IGenericStorage
     {

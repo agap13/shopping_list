@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
+using Shopping.Core.Helpers;
 using Shopping.Core.Model.Entities;
 using Shopping.Core.Services;
 
@@ -13,15 +14,12 @@ namespace Shopping.Core.ViewModels
     /// </summary>
     public class AddShoppingItemViewModel : MvxViewModel
     {
-        private const string ItemTypeWeighted = "Na wagę";
-        private const string ItemTypePieces = "Na sztuki";
-
         private readonly IMvxNavigationService _navigationService;
         private readonly IShoppingService _shoppingService;
 
         private int _counter;
 
-        public List<string> ItemTypes = new List<string> { ItemTypeWeighted, ItemTypePieces };
+        public List<string> ItemTypes = new List<string> { AppHelper.ItemTypeWeighted, AppHelper.ItemTypePieces };
 
         public AddShoppingItemViewModel(IMvxNavigationService navigationService, IShoppingService shoppingService)
         {
@@ -36,7 +34,7 @@ namespace Shopping.Core.ViewModels
         /// </summary>
         public string SelectedType { get; set; }
 
-        public bool IsPerWeightItemVisible => SelectedType.Contains(ItemTypeWeighted);
+        public bool IsPerWeightItemVisible => SelectedType.Contains(AppHelper.ItemTypeWeighted);
 
         public double AmountCounter { get; set; }
 

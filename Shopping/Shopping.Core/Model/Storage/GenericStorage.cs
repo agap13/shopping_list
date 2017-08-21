@@ -11,7 +11,7 @@ using Xamarin.Forms;
 namespace Shopping.Core.Model.Storage
 {
     /// <summary>
-    /// Class used to store database operations.
+    /// Class used to execute database operations.
     /// </summary>
     public class GenericStorage : IGenericStorage
     {

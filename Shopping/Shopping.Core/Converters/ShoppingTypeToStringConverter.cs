@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using Shopping.Core.Helpers;
 using Shopping.Core.Model.Entities;
 using Xamarin.Forms;
 
@@ -15,9 +16,9 @@ namespace Shopping.Core.Converters
         {
             if (value is ShoppingItemPerPcs)
             {
-                return "Na sztuki";
+                return AppHelper.ItemTypePieces;
             }
-            return "Na wagę";
+            return AppHelper.ItemTypeWeighted;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
